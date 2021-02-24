@@ -1,0 +1,279 @@
+
+
+header, main{
+  margin:0px 40px;
+}
+main{
+  margin-top: 100px;
+}
+
+header{
+   position: fixed;
+   top: 0;
+   right: 0;
+   left: 0px;
+}
+
+
+
+.menu{
+  color: "f2f2f2";
+  padding: 0px x0px;  
+  align-items: center;
+  background: #fff;
+  
+}
+
+.navbar{
+  
+  margin-left: 41px; 
+  font-weight: 400;
+  font-family: 'poppins', sans-serif;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+
+
+}
+
+.navbar-elementos{
+  list-style: none;
+  color: "#1d2547";
+}
+
+.navbar-items{
+  padding: 39px 19px;
+  cursor: pointer;
+}
+
+.fab, .fas{
+  color: black;
+  line-height: 1;
+}
+.iconos a, .nav-search{
+  
+  margin-right: 20px;
+  list-style: none;
+  line-height: 26px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid rgba(29,37,71,0.12);
+  border-radius: 50% ;
+}
+
+.bag{
+  background: #9F78FF;
+  width: auto;
+  padding: 8px 20px;
+  margin-right: 0px;
+  border: 1px solid #9F78FF;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.bag span{
+  margin-left: 5px;
+}
+
+.carousel-text{
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 140px;
+  font-family:  cinzel, sans-serif;
+  margin-bottom: 100px;
+
+}
+
+.boton-shop{
+  padding: 18px 40px;
+  background: #9F78FF ;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  position: relative;
+  bottom: 55px;
+  text-decoration: none;
+  
+
+}
+.boton-shop:hover{
+  padding: 18px 40px;
+  background: hsl(257, 64%, 63%) ;
+  color: #fff;
+  transition: color 0.4s linear;
+  
+  
+
+}
+
+.carousel-indicators{
+  margin: 10px;
+
+}
+
+.new-arrival{
+  font-size: 66px;
+  font-weight: 600;
+  line-height: 100px;
+  font-family:  cinzel, sans-serif;
+  align-content: center;
+
+
+}
+
+.fa-star{
+  font-size: 15px;
+  color: #FBBA42;
+}
+.productos{
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-name: fadeInUp;
+  background: rgba(221, 221, 224, 0.925);
+ 
+  
+}
+
+.popular-caption{
+  border: 1px solid #F6F8FE;
+  padding: 31px 0;
+}
+
+.popular-caption h3 a{
+  color: #000;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+}
+.popular-caption h3 a:hover{
+  color: #000;
+  text-decoration: underline;
+}
+
+.popular-caption  span{
+  font-size: 20px;
+}
+
+
+.popular-img{
+  width: 100%;
+}
+
+
+
+.border-btn{
+  border: 1px solid #9F78FF;
+  color: #9F78FF;
+  border-radius: 5px;
+  padding: 17px 42px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.4s linear;
+  margin-bottom: 30PX;
+  text-decoration: none;
+}
+
+.border-btn:hover{
+  background: #9F78FF;
+  color: #fff;
+}
+
+.collection{
+  background-image:url("img/section_2.png"); 
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding: 200px;
+}
+
+.collection-2{
+  color: #fff;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 120px;
+  font-family:  cinzel, sans-serif;
+  margin-bottom: 80px;
+
+}
+
+
+.single-product{
+  position: relative;
+  width: 100%;
+  
+}
+
+.location-details{
+  position: absolute;
+  left: 45px;
+  bottom: 100px;
+}
+
+.location-details p{
+  font-family: "Poppins",sans-serif;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 44px;
+}
+
+.location-details .boton-shop{
+  padding: 15px 40px;
+  background: #9F78FF ;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  top: 35px;
+  transition: color 0.4s linear;
+  overflow: hidden;
+}
+.location-details .boton-shop:hover{
+  background: hsl(257, 64%, 63%) ;
+  transition: color 0.4s linear;
+}
+
+.footer{
+  background: #1D2547;
+  color: #fff;
+  font-size: 14px;
+  padding: 40px 20px 5px 40px;
+  font-family: "Poppins",sans-serif;
+}
+
+.footer-logo{
+  padding: 20px 0px;
+}
+
+
+.footer-tittle p{
+  margin-top: 8px;
+  margin-bottom: 40px;
+  line-height: 26px;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.footer-tittle h4{
+  font-size:20px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.footer-tittle ul{
+  padding: 0px 10px;
+}
+
+.footer-tittle li{
+  list-style: none;
+  margin: 20px 0px;
+}
+
+.footer-tittle li a{
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0px;
+  font-size: 12px;
+}

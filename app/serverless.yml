@@ -1,0 +1,249 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+service: "marseille"
+#app: your-app-name
+#tenant: your-tenant-name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: "aws"
+  deploymentBucket: "${env:MARSEILLE_DEPLOY}"
+  runtime: "python3.7"
+  stage: "${opt:stage}"
+  region: "${env:AWS_DEFAULT_REGION}"
+  memorySize: 256
+  timeout: 30
+  # vpc:
+  #   securityGroupIds:
+  #     - "sg-00405d09f090f2212"
+  #   subnetIds:
+  #     - "subnet-cb26a3bd"
+  #    - "subnet-0787e38be73102704"
+  apiKeys:
+    - name: "KainKey"
+      value: "${env:KAIN_KEY}"
+      description: "Kain7Key"
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "rds-data:ExecuteSql"
+        - "rds-data:ExecuteStatement"
+      Resource: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
+    - Effect: "Allow"
+      Action:
+        - "secretsmanager:GetSecretValue"
+      Resource: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
+
+# you can add packaging information here
+package:
+  exclude:
+    - ".*.swp"
+    - "fixtures/**"
+    - "sanity/**"
+    - "test_**"
+    - "../libs/test_**"
+    - "../libs/README.md"
+    - "../libs/__pycache__"
+    - "README.md"
+    - "serverless.yml"
+    - "__pycache__/**"
+    - "requirements.txt"
+    - "node_modules/**"
+    - "package.json"
+    - "package.json.lock()"
+
+functions:
+  init:
+    handler: "main.init"
+    environment:
+      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
+      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
+      KAIN_TABLE: "${env:KAIN_TABLE}"
+      KAIN_DATABASE: "${env:KAIN_DATABASE}"
+  save:
+    handler: "main.save"
+    events:
+      - http:
+          path: "v1/passwords/{id}"
+          method: "post"
+          private: true
+          cors:
+            origin: '*'
+            headers:
+              - 'Content-Type'
+              - 'X-Amz-Date'
+              - 'Authorization'
+              - 'X-Api-Key'
+              - 'X-Amz-Security-Token'
+              - 'X-Amz-User-Agent'
+            allowCredentials: false
+    environment:
+      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
+      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
+      KAIN_TABLE: "${env:KAIN_TABLE}"
+      KAIN_DATABASE: "${env:KAIN_DATABASE}"
+  details:
+    handler: "main.details"
+    events:
+      - http:
+          path: "v1/passwords/{id}"
+          method: "get"
+          private: true
+          cors:
+            origin: '*'
+            headers:
+              - 'Content-Type'
+              - 'X-Amz-Date'
+              - 'Authorization'
+              - 'X-Api-Key'
+              - 'X-Amz-Security-Token'
+              - 'X-Amz-User-Agent'
+            allowCredentials: false
+    environment:
+      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
+      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
+      KAIN_TABLE: "${env:KAIN_TABLE}"
+      KAIN_DATABASE: "${env:KAIN_DATABASE}"
+  search:
+    handler: "main.search"
+    events:
+      - http:
+          path: "v1/passwords/_search"
+          method: "post"
+          private: true
+          cors:
+            origin: '*'
+            headers:
+              - 'Content-Type'
+              - 'X-Amz-Date'
+              - 'Authorization'
+              - 'X-Api-Key'
+              - 'X-Amz-Security-Token'
+              - 'X-Amz-User-Agent'
+            allowCredentials: false
+    environment:
+      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
+      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
+      KAIN_TABLE: "${env:KAIN_TABLE}"
+      KAIN_DATABASE: "${env:KAIN_DATABASE}"
+  delete:
+    handler: "main.delete"
+    events:
+      - http:
+          path: "v1/passwords/{id}"
+          method: "delete"
+          private: true
+          cors:
+            origin: '*'
+            headers:
+              - 'Content-Type'
+              - 'X-Amz-Date'
+              - 'Authorization'
+              - 'X-Api-Key'
+              - 'X-Amz-Security-Token'
+              - 'X-Amz-User-Agent'
+            allowCredentials: false
+    environment:
+      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
+      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
+      KAIN_TABLE: "${env:KAIN_TABLE}"
+      KAIN_DATABASE: "${env:KAIN_DATABASE}"
+
+#    The following are a few example events you can configure
+#    NOTE: Please make sure to change your handler code to work with those events
+#    Check the event documentation for details
+#    events:
+#      - http:
+#          path: users/create
+#          method: get
+#      - websocket: $connect
+#      - s3: ${env:BUCKET}
+#      - schedule: rate(10 minutes)
+#      - sns: greeter-topic
+#      - stream: arn:aws:dynamodb:region:XXXXXX:table/foo/stream/1970-01-01T00:00:00.000
+#      - alexaSkill: amzn1.ask.skill.xx-xx-xx-xx
+#      - alexaSmartHome: amzn1.ask.skill.xx-xx-xx-xx
+#      - iot:
+#          sql: "SELECT * FROM 'some_topic'"
+#      - cloudwatchEvent:
+#          event:
+#            source:
+#              - "aws.ec2"
+#            detail-type:
+#              - "EC2 Instance State-change Notification"
+#            detail:
+#              state:
+#                - pending
+#      - cloudwatchLog: '/aws/lambda/hello'
+#      - cognitoUserPool:
+#          pool: MyUserPool
+#          trigger: PreSignUp
+#      - alb:
+#          listenerArn: arn:aws:elasticloadbalancing:us-east-1:XXXXXX:listener/app/my-load-balancer/50dc6c495c0c9188/
+#          priority: 1
+#          conditions:
+#            host: example.com
+#            path: /hello
+
+#    Define function environment variables here
+#    environment:
+#      variable2: value2
+
+# you can add CloudFormation resource templates here
+#resources:
+#  Resources:
+#    NewResource:
+#      Type: AWS::S3::Bucket
+#      Properties:
+#        BucketName: my-new-bucket
+#  Outputs:
+#     NewOutput:
+#       Description: "Description for the output"
+#       Value: "Some output value"
+
+resources:
+  Resources:
+
+    # CORS FOR 4XX
+    GatewayResponseDefault4XX:
+      Type: 'AWS::ApiGateway::GatewayResponse'
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: 'DEFAULT_4XX'
+        RestApiId:
+          Ref: 'ApiGatewayRestApi'
+
+    # CORS FOR 5XX
+    GatewayResponseDefault5XX:
+      Type: 'AWS::ApiGateway::GatewayResponse'
+      Properties:
+        ResponseParameters:
+          gatewayresponse.header.Access-Control-Allow-Origin: "'*'"
+          gatewayresponse.header.Access-Control-Allow-Headers: "'*'"
+        ResponseType: 'DEFAULT_5XX'
+        RestApiId:
+          Ref: 'ApiGatewayRestApi'
+
+plugins:
+  - "serverless-python-requirements"
+  - "serverless-pseudo-parameters"
+
+custom:
+  pythonRequirements:
+    dockerizePip: false

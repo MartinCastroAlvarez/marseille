@@ -1,0 +1,87 @@
+body{
+  margin: 0px 15px;
+}
+
+
+.encabezado{
+  background: #edf2f7;
+  color: #949EA5;
+  font-size: 15px;
+  vertical-align: middle;
+  margin-top: 90px;
+  
+
+}
+
+.encabezado p{
+  margin: 10px;
+}
+
+.container{
+  margin: 0px 20px;
+  padding: 0px 50px;
+}
+
+
+.section-tittle h2{
+  font-size: 65px;
+  display: block;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  margin-top: 100px;
+  font-family: "Cinzel",serif;
+  
+}
+.section-tittle h2 span{
+  font-size: 75px;
+}
+
+
+.btn{
+  width: 100%;
+  color: #616875;
+  background: #fff;
+  border: 1px solid #ededed;
+  padding: 10px 20px;
+  text-align: start;
+  margin: 5px;
+  font-size: 16px;
+
+}
+
+.productos{
+  visibility: visible;
+  animation-duration: 1s;
+  animation-delay: 0.1s;
+  animation-name: fadeInUp;
+  background: rgba(240, 240, 241, 0.525);
+  margin-bottom: 20px;
+ 
+  
+}
+
+.popular-caption{
+  border: 1px solid #F6F8FE;
+  padding: 31px 0;
+}
+
+.popular-caption h3 a{
+  color: #000;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+}
+.popular-caption h3 a:hover{
+  color: #000;
+  text-decoration: underline;
+}
+
+.popular-caption  span{
+  font-size: 20px;
+}
+
+
+.popular-img{
+  width: 100%;
+}
