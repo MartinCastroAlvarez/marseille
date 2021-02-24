@@ -30,3 +30,11 @@ Style:
   DarkGray: "#7f8C8D"
   Primary: "#3498DB"
   Secondary: "#2980B9"
+
+# --------------------------------------------
+# Strings Configuration
+# --------------------------------------------
+Strings:
+  Templates:
+    en: "Lorem Ipsum"
+    es: "Lorem Ipsum"

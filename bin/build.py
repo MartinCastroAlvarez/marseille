@@ -15,6 +15,9 @@ import yaml
 from htmlmin.main import minify
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+# LANGUAGE CONFIGURATION
+LANGUAGE: str = "en"
+
 # ROOT DIRECTORY
 # Getting current working directory.
 ROOT: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,6 +83,10 @@ context: dict = {
     "application": config['Application'],
     "url": secrets['url'],
     "style": config['Style'],
+    "strings": {
+        k: v[LANGUAGE]
+        for k, v in config['Strings'].items()
+    }
 }
 
 # RENDERING WEB VIEWS
