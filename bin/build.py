@@ -77,6 +77,13 @@ def recommend(data: dict) -> typing.Generator[typing.Tuple[str, list], None, Non
         yield key, values
 jinja.filters['recommend'] = recommend
 
+# ASSETS DIRECTORY
+# Getting web source directory.
+MEDIA: str = os.path.join(ROOT, config['Build']['Media'])
+print(f'Media directory: {MEDIA}')
+if not os.path.isdir(MEDIA):
+    raise OSError(MEDIA)
+
 # APPLICATION CONTEXT
 # Loading variables that are available to all templates.
 context: dict = {
@@ -121,6 +128,17 @@ for filename in glob.iglob("**", recursive=True):
         target: str = os.path.join(BUILD, filename)
         print(f'Adding media: {source}')
         shutil.copy2(source, target)
+
+# COPYING ASSETS
+# Copying assets into the media folder.
+os.chdir(MEDIA)
+os.mkdir(os.path.join(BUILD, "assets"))
+for filename in glob.iglob("**", recursive=True):
+    print(f'Media file: {filename}')
+    if os.path.isdir(filename):
+        os.mkdir(os.path.join(BUILD, 'assets', filename))
+    else:
+        shutil.copy2(filename, os.path.join(BUILD, 'assets', filename))
 
 # THE END
 print(f'Web built successfully!')

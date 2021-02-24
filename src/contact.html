@@ -1,7 +1,9 @@
-{% extends 'root.layout.html' %}
+{% extends 'app.layout.html' %}
 
-{% block body %}
-    {% include 'header.layout.html' %}
-
-    {% include 'footer.layout.html' %}
+{% block main %}
+    <h1>{{strings.ContactUs}}</h1>
+    <p>{{strings.LoremIpsum}}</p>
+    </p>
+        <a href="email:{{application.Email}}">{{application.Email}}</a>
+    </p>
 {% endblock %}

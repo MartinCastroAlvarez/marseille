@@ -9,6 +9,23 @@ source .env/bin/activate
 pip install -r requirements.txt
 ```
 
+### TODO
+- Deploy to Production Domain
+- Google Analytics
+- Meta Keywords
+- Meta Author
+- Meta Description
+- Facebook Link
+- Twitter Link
+- Instagram Link
+- Pinterest Link
+- Fetch Products
+- Checkout Link
+- Thank You Page
+- Privacy Policy
+- Terms of Service
+- Footer Cleanup
+
 ### Deployment
 ```bash
 ./bin/flake8.sh && ./bin/deploy.sh "master"
