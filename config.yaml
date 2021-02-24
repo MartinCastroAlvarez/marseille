@@ -13,9 +13,6 @@ Application:
   Twitter: "TODO"
   Pinterest: "TODO"
   Version: "v1.0.0"
-  Description: "TODO"
-  Keywords: "TODO"
-  Author: "TODO"
 
 # --------------------------------------------
 # Build Configuration
@@ -44,27 +41,48 @@ Strings:
   Home:
     en: "Home"
     es: "Inicio"
+    fr: "TODO"
   Contact:
     en: "Contact"
     es: "Contacto"
+    fr: "TODO"
   About:
     en: "About"
     es: "Nosotros"
+    fr: "TODO"
   ContactUs:
     en: "Contact Us"
     es: "Contáctenos"
+    fr: "TODO"
   AboutUs:
     en: "About Us"
     es: "Acerca de Nosotros"
+    fr: "TODO"
   LoremIpsum:
     en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     es: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    fr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   Copyright:
     en: "Copyright ©2021 All rights reserved"
     es: "Copyright ©2021 All rights reserved"
+    fr: "TODO"
   PrivacyPolicy:
     en: "Privacy Policy"
     es: "Política de Privacidad"
+    fr: "TODO"
   TermsOfService:
     en: "Terms of Service"
     es: "Términos y Condiciones"
+    fr: "TODO"
+  Description:
+    en: "TODO"
+    es: "TODO"
+    fr: "TODO"
+  Keywords:
+    en: "TODO"
+    es: "TODO"
+    fr: "TODO"
+  Author:
+    en: "TODO"
+    es: "TODO"
+    fr: "TODO"
