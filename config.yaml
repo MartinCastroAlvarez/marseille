@@ -7,10 +7,26 @@
 # --------------------------------------------
 Application:
   Name: "The K Look"
+  Version: "v1.0.0"
+  Description: "TODO"
+  Keywords: "TODO"
+  Author: "TODO"
 
 # --------------------------------------------
 # Build Configuration
 # --------------------------------------------
 Build:
-  Templates: "web"
+  Templates: "src"
   Package: "build"
+
+# --------------------------------------------
+# Style Configuration
+# --------------------------------------------
+Style:
+  White: "#F5F8FA"
+  Silver: "#BDC3C7"
+  Black: "#282828"
+  LightGray: "#95A5A6"
+  DarkGray: "#7f8C8D"
+  Primary: "#3498DB"
+  Secondary: "#2980B9"

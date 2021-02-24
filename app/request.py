@@ -67,6 +67,13 @@ class Request:
         return int(self.body.get(constants.PAGE, 0))
 
     @property
+    def since_id(self) -> str:
+        """
+        Offset Property.
+        """
+        return self.body.get(constants.SINCE_ID, '')
+
+    @property
     def limit(self) -> int:
         """
         Limit Property.

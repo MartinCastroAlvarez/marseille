@@ -22,7 +22,7 @@ service: "marseille"
 provider:
   name: "aws"
   deploymentBucket: "${env:MARSEILLE_DEPLOY}"
-  runtime: "python3.7"
+  runtime: "python3.8"
   stage: "${opt:stage}"
   region: "${env:AWS_DEFAULT_REGION}"
   memorySize: 256
@@ -34,19 +34,18 @@ provider:
   #     - "subnet-cb26a3bd"
   #    - "subnet-0787e38be73102704"
   apiKeys:
-    - name: "KainKey"
-      value: "${env:KAIN_KEY}"
-      description: "Kain7Key"
-  iamRoleStatements:
-    - Effect: "Allow"
-      Action:
-        - "rds-data:ExecuteSql"
-        - "rds-data:ExecuteStatement"
-      Resource: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
-    - Effect: "Allow"
-      Action:
-        - "secretsmanager:GetSecretValue"
-      Resource: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
+    - name: "MarseilleKey"
+      value: "${env:MARSEILLE_KEY}"
+      description: "MarseilleKey"
+      usagePlan:
+        name: "Public Marseille Api Key"
+        description: "Public Marseille Api Key"
+        quota:
+          limit: 3000
+          period: "DAY"
+        throttle:
+          burstLimit: 40
+          rateLimit: 20
 
 # you can add packaging information here
 package:
@@ -67,40 +66,11 @@ package:
     - "package.json.lock()"
 
 functions:
-  init:
-    handler: "main.init"
-    environment:
-      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
-      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
-      KAIN_TABLE: "${env:KAIN_TABLE}"
-      KAIN_DATABASE: "${env:KAIN_DATABASE}"
-  save:
-    handler: "main.save"
+  products:
+    handler: "main.products"
     events:
       - http:
-          path: "v1/passwords/{id}"
-          method: "post"
-          private: true
-          cors:
-            origin: '*'
-            headers:
-              - 'Content-Type'
-              - 'X-Amz-Date'
-              - 'Authorization'
-              - 'X-Api-Key'
-              - 'X-Amz-Security-Token'
-              - 'X-Amz-User-Agent'
-            allowCredentials: false
-    environment:
-      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
-      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
-      KAIN_TABLE: "${env:KAIN_TABLE}"
-      KAIN_DATABASE: "${env:KAIN_DATABASE}"
-  details:
-    handler: "main.details"
-    events:
-      - http:
-          path: "v1/passwords/{id}"
+          path: "v1/products"
           method: "get"
           private: true
           cors:
@@ -114,54 +84,9 @@ functions:
               - 'X-Amz-User-Agent'
             allowCredentials: false
     environment:
-      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
-      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
-      KAIN_TABLE: "${env:KAIN_TABLE}"
-      KAIN_DATABASE: "${env:KAIN_DATABASE}"
-  search:
-    handler: "main.search"
-    events:
-      - http:
-          path: "v1/passwords/_search"
-          method: "post"
-          private: true
-          cors:
-            origin: '*'
-            headers:
-              - 'Content-Type'
-              - 'X-Amz-Date'
-              - 'Authorization'
-              - 'X-Api-Key'
-              - 'X-Amz-Security-Token'
-              - 'X-Amz-User-Agent'
-            allowCredentials: false
-    environment:
-      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
-      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
-      KAIN_TABLE: "${env:KAIN_TABLE}"
-      KAIN_DATABASE: "${env:KAIN_DATABASE}"
-  delete:
-    handler: "main.delete"
-    events:
-      - http:
-          path: "v1/passwords/{id}"
-          method: "delete"
-          private: true
-          cors:
-            origin: '*'
-            headers:
-              - 'Content-Type'
-              - 'X-Amz-Date'
-              - 'Authorization'
-              - 'X-Api-Key'
-              - 'X-Amz-Security-Token'
-              - 'X-Amz-User-Agent'
-            allowCredentials: false
-    environment:
-      KAIN_CLUSTER: "arn:aws:rds:#{AWS::Region}:#{AWS::AccountId}:cluster:${env:KAIN_CLUSTER}"
-      KAIN_SECRET: "arn:aws:secretsmanager:#{AWS::Region}:#{AWS::AccountId}:secret:${env:KAIN_SECRET}"
-      KAIN_TABLE: "${env:KAIN_TABLE}"
-      KAIN_DATABASE: "${env:KAIN_DATABASE}"
+      MARSEILLE_SHOP: "${env:MARSEILLE_SHOP}"
+      MARSEILLE_USER: "${env:MARSEILLE_USER}"
+      MARSEILLE_PASS: "${env:MARSEILLE_PASS}"
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events

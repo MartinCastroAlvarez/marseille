@@ -79,6 +79,7 @@ jinja.filters['recommend'] = recommend
 context: dict = {
     "application": config['Application'],
     "url": secrets['url'],
+    "style": config['Style'],
 }
 
 # RENDERING WEB VIEWS

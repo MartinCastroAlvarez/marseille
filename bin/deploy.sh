@@ -14,11 +14,11 @@ then
 fi
 export AWS_PROFILE=$(cat "$HOME/.marseille" | jq -r '.profile')
 export AWS_DEFAULT_REGION=$(cat "$HOME/.marseille" | jq -r '.region')
-export MARSEILLE_SHOP=$(cat "$HOME/.marseille " | jq -r '.shop')
-export MARSEILLE_USER=$(cat "$HOME/.marseille " | jq -r '.user')
-export MARSEILLE_PASS=$(cat "$HOME/.marseille " | jq -r '.pass')
-export MARSEILLE_DEPLOY=$(cat "$HOME/.deploy" | jq -r '.deploy')
-export MARSEILLE_KEY=$(cat "$HOME/.marseille " | jq -r '.key')
+export MARSEILLE_SHOP=$(cat "$HOME/.marseille" | jq -r '.shop')
+export MARSEILLE_USER=$(cat "$HOME/.marseille" | jq -r '.user')
+export MARSEILLE_PASS=$(cat "$HOME/.marseille" | jq -r '.pass')
+export MARSEILLE_DEPLOY=$(cat "$HOME/.marseille" | jq -r '.deploy')
+export MARSEILLE_KEY=$(cat "$HOME/.marseille" | jq -r '.key')
 if [ $? != 0 ]
 then
     echo "ERROR: Failed to load config keys."

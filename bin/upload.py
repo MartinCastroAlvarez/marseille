@@ -28,7 +28,7 @@ with open(CONFIG, 'r') as file_handler:
     config: dict = yaml.full_load(file_handler)
 
 # Loading configuration file.
-SECRETS: str = os.path.join(os.environ['HOME'], ".kain")
+SECRETS: str = os.path.join(os.environ['HOME'], ".marseille")
 if not os.path.isfile(SECRETS):
     raise RuntimeError("Invalid config file.", SECRETS)
 with open(SECRETS) as file_handler:

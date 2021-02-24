@@ -20,6 +20,7 @@ VERSION: str = "version"
 TRACE: str = "trace"
 CODE: str = "code"
 
+SINCE_ID: str = "since_id"
 LIMIT: str = "limit"
 PAGE: str = "page"
 OFFSET: str = "offset"
