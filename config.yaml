@@ -57,23 +57,23 @@ Strings:
   Home:
     en: "Home"
     es: "Inicio"
-    fr: "TODO"
+    fr: "Domicile"
   Contact:
     en: "Contact"
     es: "Contacto"
-    fr: "TODO"
+    fr: "Contact"
   About:
     en: "About"
     es: "Nosotros"
-    fr: "TODO"
+    fr: "Nous"
   ContactUs:
     en: "Contact Us"
     es: "Contáctenos"
-    fr: "TODO"
+    fr: "Nous Contacter"
   AboutUs:
     en: "About Us"
     es: "Acerca de Nosotros"
-    fr: "TODO"
+    fr: "à propos de nous"
   LoremIpsum:
     en: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     es: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -81,7 +81,7 @@ Strings:
   Copyright:
     en: "Copyright ©2021 All rights reserved"
     es: "Copyright ©2021 All rights reserved"
-    fr: "TODO"
+    fr: "Copyright ©2021 All rights reserved"
   PrivacyPolicy:
     en: "Privacy Policy"
     es: "Política de Privacidad"
@@ -124,240 +124,228 @@ Strings:
     fr: "Manteaux"
   Blazers:
     en: "Blazers"
-    es: "Chaquetas"
+    es: "Americanas"
     fr: "Blazers"
   Accessories:
     en: "Accessories"
     es: "Accesorios"
-    fr: "Accessories"
+    fr: "Accessoires"
   All:
     en: "View All"
     es: "Ver Todo"
-    fr: ""
+    fr: "Voir tout"
   JacketsPuffers:
     en: "Jackets / Puffers"
-    es: ""
-    fr: ""
+    es: "Chaquetas / Fumadoras"
+    fr: "Veste / Puffers"
   Jackets:
     en: "Jackets"
-    es: ""
-    fr: ""
+    es: "Chaquetas"
+    fr: "Vestes"
   Puffers:
     en: "Puffers"
-    es: ""
-    fr: ""
+    es: "Fumadoras"
+    fr: "Puffers"
   Denim:
     en: "Denim"
-    es: ""
-    fr: ""
+    es: "Denim"
+    fr: "Denim"
   DressesMono:
-    en: "Dresses / Mono"
-    es: ""
-    fr: ""
-  Mini:
-    en: "Mini"
-    es: ""
-    fr: ""
-  Midi:
-    en: "Midi"
-    es: ""
-    fr: ""
+    en: "Dresses / Monos"
+    es: "Vestidos / Monos"
+    fr: "Robes / Combinaison"
   Maxi:
     en: "Maxi"
-    es: ""
-    fr: ""
+    es: "Maxi"
+    fr: "Maxi"
   JumpSuits:
     en: "Jump Suits"
-    es: ""
-    fr: ""
+    es: "Mono"
+    fr: "Combinaison"
   ShirtsTops:
     en: "Shirts / Tops"
-    es: ""
-    fr: ""
+    es: "Camisas / Tops"
+    fr: "Chemise / Haunts"
   Shirts:
     en: "Shirts"
-    es: ""
-    fr: ""
+    es: "Camisas"
+    fr: "Chemises"
   Blouses:
     en: "Blouses"
-    es: ""
-    fr: ""
+    es: "Blusas"
+    fr: "Chemisières"
   Tops:
     en: "Tops"
-    es: ""
-    fr: ""
-  Croctops:
-    en: "Croc Tops"
-    es: ""
-    fr: ""
+    es: "Tops"
+    fr: "Tops"
+  CropTops:
+    en: "Crop Tops"
+    es: "Crop Tops"
+    fr: "Hauts Courts"
   Tshirts:
     en: "T-Shirts"
-    es: ""
-    fr: ""
-  Basic:
-    en: "Basic"
-    es: ""
-    fr: ""
+    es: "Remeras"
+    fr: "T-Shirts"
   Printed:
     en: "Printed"
-    es: ""
-    fr: ""
+    es: "Impreso"
+    fr: "Imprimée"
   Cropped:
     en: "Cropped"
-    es: ""
-    fr: ""
+    es: "Recortado"
+    fr: "Tondu"
   LongSleeve:
     en: "Long Sleeve"
-    es: ""
-    fr: ""
+    es: "Manga Larga"
+    fr: "Manche Longue"
   TankTops:
     en: "Tank Tops"
-    es: ""
-    fr: ""
+    es: "Camiseta"
+    fr: "Débardeurs"
   ShortSleeve:
     en: "Short Sleeve"
-    es: ""
-    fr: ""
+    es: "Manga Corta"
+    fr: "Manche Courte"
   Knitwear:
     en: "Knitwear"
-    es: ""
-    fr: ""
+    es: "Tricot"
+    fr: "Tricots"
   Cardigans:
     en: "Cargidans"
-    es: ""
-    fr: ""
+    es: "Cardigán"
+    fr: "Cardigans"
   Sweatters:
     en: "Sweaters"
-    es: ""
-    fr: ""
+    es: "Suéteres"
+    fr: "Chandails"
   KnitTops:
     en: "Knit Tops"
-    es: ""
-    fr: ""
+    es: "Tops"
+    fr: "Tricots"
   Dresses:
     en: "Dresses"
-    es: ""
-    fr: ""
+    es: "Vestidos"
+    fr: "Robes"
   TurtleNeck:
     en: "Turtle Neck"
-    es: ""
-    fr: ""
+    es: "Cuello de Tortuga"
+    fr: "Col Roulé"
   Basics:
     en: "Basics"
-    es: ""
-    fr: ""
+    es: "Básicos"
+    fr: "Basiques"
   Pantalones:
     en: "Pantalones"
-    es: ""
-    fr: ""
+    es: "Pantalones"
+    fr: "Pantalones"
   Office:
     en: "Office"
-    es: ""
-    fr: ""
+    es: "Oficina"
+    fr: "Bureau"
   Legging:
     en: "Leggings"
-    es: ""
-    fr: ""
+    es: "Polainas"
+    fr: "Leggings"
   Joggers:
     en: "Joggers"
-    es: ""
-    fr: ""
+    es: "Corredores"
+    fr: "Joggeurs"
   Jeans:
     en: "Jeans"
-    es: ""
-    fr: ""
+    es: "Jeans"
+    fr: "Jeans"
   HighWaist:
     en: "High Waist"
-    es: ""
-    fr: ""
+    es: "Cintura Alta"
+    fr: "Taille Haute"
   MidWaist:
     en: "Mid Waist"
-    es: ""
-    fr: ""
+    es: "Cintura Media"
+    fr: "Taille Moyenne"
   Slouchy:
     en: "Slouchy"
-    es: ""
-    fr: ""
+    es: "Desgarbado"
+    fr: "Mou"
   MomFit:
     en: "Mom Fit"
-    es: ""
-    fr: ""
+    es: "Mom Fit"
+    fr: "Maman en Forme"
   Baggy:
     en: "Baggy"
-    es: ""
-    fr: ""
+    es: "Holgado"
+    fr: "Bouffant"
   Straight:
     en: "Straight"
-    es: ""
-    fr: ""
+    es: "Ajustado"
+    fr: "Droit"
   Slim:
     en: "Slim"
-    es: ""
-    fr: ""
+    es: "Delgado"
+    fr: "Mince"
   SkirtsShorts:
     en: "Skirts / Shorts"
-    es: ""
-    fr: ""
+    es: "Faldas / Shorts"
+    fr: "Jupes / Shorts"
   Mini:
     en: "Mini"
-    es: ""
-    fr: ""
+    es: "Mini"
+    fr: "Mini"
   Midi:
     en: "Midi"
-    es: ""
-    fr: ""
+    es: "Midi"
+    fr: "Mi-Longue"
   Pleated:
     en: "Pleated"
-    es: ""
-    fr: ""
+    es: "Plisado"
+    fr: "Pliseé"
   Shorts:
     en: "Shorts"
-    es: ""
-    fr: ""
+    es: "Shorts"
+    fr: "Shorts"
   TShirts:
     en: "T-Shirts"
-    es: ""
-    fr: ""
+    es: "Remeras"
+    fr: "T-Shirts"
   SweatShirt:
     en: "Sweat-Shirt"
-    es: ""
-    fr: ""
+    es: "Sudaderas"
+    fr: "Sweat-Shirt"
   Bags:
     en: "Bags"
-    es: ""
-    fr: ""
+    es: "Bolsos"
+    fr: "Sacs"
   CrossBodyBags:
     en: "Cross Body Bags"
-    es: ""
-    fr: ""
+    es: "Bolsos Cruzados"
+    fr: "SAC BANDOULIÈRES"
   MidiBags:
     en: "Midi Bags"
-    es: ""
-    fr: ""
+    es: "Mini Bolso"
+    fr: "SAC À MAIN"
   LargeBags:
     en: "Large Bags"
-    es: ""
-    fr: ""
+    es: "Bolsa Grande"
+    fr: "GRAND SAC / SAC À DOS"
   Jewerly:
     en: "Jewerly"
-    es: ""
-    fr: ""
+    es: "Joyería"
+    fr: "Bijoux"
   Belts:
     en: "Belts"
-    es: ""
-    fr: ""
+    es: "Cinturones"
+    fr: "Ceitures"
   Sunglasses:
     en: "Sunglasses"
-    es: ""
+    es: "Gafas de Sol"
     fr: ""
   HatsCaps:
     en: "Hats / Caps"
-    es: ""
-    fr: ""
+    es: "Sombreros / Gorras"
+    fr: "Chapeaux"
   Handkerchiefs:
     en: "Handkerchiefs"
-    es: ""
-    fr: ""
+    es: "Bufandas"
+    fr: "Mouchoir"
 
 # --------------------------------------------
 # Links Configuration 
@@ -411,13 +399,13 @@ Categories:
             filter: ""
           Tops:
             filter: ""
-          Croctops:
+          CropTops:
             filter: ""
       TShirts:
         Filters:
           All:
             filter: ""
-          Basic:
+          Basics:
             filter: ""
           Printed:
             filter: ""

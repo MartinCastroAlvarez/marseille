@@ -26,6 +26,8 @@ pip install -r requirements.txt
 - Terms of Service
 - Footer Cleanup
 - Multi Language Deployment
+- French needs a review
+- Categories need a review
 
 ### Deployment
 ```bash
