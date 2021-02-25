@@ -8,11 +8,21 @@
 Application:
   Name: "The K Look"
   Email: "the.k.look2020@gmail.com"
-  Instagram: "TODO"
-  Facebook: "TODO"
-  Twitter: "TODO"
-  Pinterest: "TODO"
   Version: "v1.0.0"
+
+# --------------------------------------------
+# Language Configuration
+# --------------------------------------------
+Language:
+  English:
+    Code: "en"
+    Title: "English"
+  Spanish:
+    Code: "es"
+    Title: "Spanish"
+  French:
+    Code: "fr"
+    Title: "French"
 
 # --------------------------------------------
 # Build Configuration
@@ -33,6 +43,12 @@ Style:
   DarkGray: "#7f8C8D"
   Primary: "#3498DB"
   Secondary: "#2980B9"
+
+# --------------------------------------------
+# Assets Configuration
+# --------------------------------------------
+Assets:
+  Logo: "k/the k look v2.png"
 
 # --------------------------------------------
 # Strings Configuration
@@ -82,7 +98,125 @@ Strings:
     en: "TODO"
     es: "TODO"
     fr: "TODO"
-  Author:
-    en: "TODO"
-    es: "TODO"
+  Lifestyle:
+    en: "Lifestyle"
+    es: "Estilo de Vida"
+    fr: "Style de Vie"
+  Music:
+    en: "Music"
+    es: "Musica"
+    fr: "Musique"
+  Food:
+    en: "Food"
+    es: "Comida"
+    fr: "Nourriture"
+  Life:
+    en: "The K Life"
+    es: "The K Life"
+    fr: "The K Life"
+  Coats:
+    en: "Coats"
+    es: ""
+    fr: ""
+  Jackets:
+    en: "Jacket / Puffers"
+    es: "Chaquetas"
+    fr: ""
+  Blazers:
+    en: "Blazers"
+    es: ""
+    fr: ""
+  Dresses:
+    en: "Dresses / Mono"
+    es: ""
+    fr: ""
+  Shirts:
+    en: "Shirt / Tops"
+    es: ""
+    fr: ""
+  Tshirts:
+    en: "T-Shirts"
+    es: ""
+    fr: ""
+  Knitwear:
+    en: "Knitwear"
+    es: ""
+    fr: ""
+  Pantalones:
+    en: "Pantalones"
+    es: ""
+    fr: ""
+  Jeans:
+    en: "Jeans"
+    es: ""
+    fr: ""
+  Skirts:
+    en: "Skirts / Shorts"
+    es: ""
+    fr: ""
+  Sweat:
+    en: "Sweat-Shirts"
+    es: ""
+    fr: ""
+  Bags:
+    en: "Bags"
+    es: ""
+    fr: ""
+  Accessories:
+    en: "Accessories"
+    es: ""
+    fr: ""
+  Language:
+    en: "Language"
+    es: "Lenguaje"
     fr: "TODO"
+  Other:
+    en: "Other"
+    es: "Otros"
+    fr: "TODO"
+
+# --------------------------------------------
+# Links Configuration 
+# --------------------------------------------
+Link:
+  Instagram: "#"
+  Facebook: "#"
+  Twitter: "#"
+  Pinterest: "#"
+  Music: "#"
+  Food: "#"
+  Life: "#"
+
+# --------------------------------------------
+# Categories Configuration
+# --------------------------------------------
+Categories:
+  Coats:
+    Subcategories:
+      Jackets:
+        Lorem: Ipsum
+  Blazers:
+    Lorem: Ipsum
+    Subcategories:
+      Dresses:
+        Lorem: Ipsum
+      Shirts:
+        Lorem: Ipsum
+      Tshirts:
+        Lorem: Ipsum
+      Knitwear:
+        Lorem: Ipsum
+      Pantalones:
+        Lorem: Ipsum
+      Jeans:
+        Lorem: Ipsum
+      Skirts:
+        Lorem: Ipsum
+      Sweat:
+        Lorem: Ipsum
+  Other:
+    Subcategories:
+      Bags:
+        Lorem: Ipsum
+      Accessories:
+        Lorem: Ipsum

@@ -1,103 +1,80 @@
-<footer class="container footer mt-0">
-    <div class="row d-flex justify-content-between">
-        <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-logo mb-35">
-                    <a href="index.html">
-                        <img src="assets/the k look v2.png" width="100px">
-                    </a>
-                </div>
-                <div class="footer-tittle">
-                    <p>{{strings.LoremIpsum}}</p>
-                </div>
+<footer>
+
+    {# FOOTER TOP SECTIONS #}
+    <div class="row">
+
+        {# APPLICATION LOGO #}
+        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+            <div>
+                <a href="index.html">
+                    <img src="assets/{{assets.Logo}}" width="100px">
+                </a>
+            </div>
+            <div>
+                <p>{{strings.LoremIpsum}}</p>
             </div>
         </div>  
-        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>{{application.Name}}</h4>
-                    <ul>
-                        <li>
-                            <a href="contact.html">{{strings.ContactUs}}</a>
-                        </li>
-                        <li>
-                            <a href="about.html">{{strings.AboutUs}}</a>
-                        </li>
-                        <li>
-                            <a href="legal.html">{{strings.TermsOfService}}</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html">{{strings.PrivacyPolicy}}</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        {# END OF APPLICATION LOGO #}
+
+        {# LANGUAGES #}
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+            <h4>{{strings.Language}}</h4>
+            <ul>
+                {% for l in language.values() %}
+                    <li>
+                        <a href="../{{l.Code}}/index.html">{{l.Title}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
-        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>{{application.Name}}</h4>
-                    <ul>
-                        <li>
-                            <a href="contact.html">{{strings.ContactUs}}</a>
-                        </li>
-                        <li>
-                            <a href="about.html">{{strings.AboutUs}}</a>
-                        </li>
-                        <li>
-                            <a href="legal.html">{{strings.TermsOfService}}</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html">{{strings.PrivacyPolicy}}</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        {# END OF LANGUAGES #}
+
+        {# LIFESTYLE #}
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+            <h4>{{strings.Lifestyle}}</h4>
+            <ul>
+                <li>
+                    <a href="{{link.Music}}">{{strings.Music}}</a>
+                </li>
+                <li>
+                    <a href="{{link.Food}}">{{strings.Food}}</a>
+                </li>
+                <li>
+                    <a href="{{link.Life}}">{{strings.Life}}</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>{{application.Name}}</h4>
-                    <ul>
-                        <li>
-                            <a href="contact.html">{{strings.ContactUs}}</a>
-                        </li>
-                        <li>
-                            <a href="about.html">{{strings.AboutUs}}</a>
-                        </li>
-                        <li>
-                            <a href="legal.html">{{strings.TermsOfService}}</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html">{{strings.PrivacyPolicy}}</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        {# END OF LIFESTYLE #}
+
+        {# ABOUT #}
+        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+            <h4>{{application.Name}}</h4>
+            <ul>
+                <li>
+                    <a href="contact.html">{{strings.ContactUs}}</a>
+                </li>
+                <li>
+                    <a href="about.html">{{strings.AboutUs}}</a>
+                </li>
+                <li>
+                    <a href="legal.html">{{strings.TermsOfService}}</a>
+                </li>
+                <li>
+                    <a href="privacy.html">{{strings.PrivacyPolicy}}</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
-            <div class="single-footer-caption mb-50">
-                <div class="footer-tittle">
-                    <h4>{{application.Name}}</h4>
-                    <ul>
-                        <li>
-                            <a href="contact.html">{{strings.ContactUs}}</a>
-                        </li>
-                        <li>
-                            <a href="about.html">{{strings.AboutUs}}</a>
-                        </li>
-                        <li>
-                            <a href="legal.html">{{strings.TermsOfService}}</a>
-                        </li>
-                        <li>
-                            <a href="privacy.html">{{strings.PrivacyPolicy}}</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-      </div>
+        {# END OF ABOUT #}
+
     </div>
-    <div class="text-center">
-        <p>{{strings.Copyright}}</p>
-    </div>
+    {# END OF FOOTER TOP SECTIONS #}
+
+    {# FOOTER COPYRIGHT #}
+    <center>
+        <p>
+            {{strings.Copyright}} - {{application.Name}} {{application.Version}}
+        </p>
+    </center>
+    {# END OF FOOTER COPYRIGHT #}
+
 </footer>

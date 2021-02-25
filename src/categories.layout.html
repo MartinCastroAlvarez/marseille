@@ -1,0 +1,16 @@
+<div class="row">
+    {% for id, category in categories.items() %}
+        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
+            <h4>{{strings[id]}}</h4>
+            <ul>
+                {% for id, subcategory in category.Subcategories.items() %}
+                    {% if strings[id] %}
+                        <li>
+                            <a href="#">{{strings[id]}}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+</div>

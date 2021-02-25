@@ -25,6 +25,7 @@ pip install -r requirements.txt
 - Privacy Policy
 - Terms of Service
 - Footer Cleanup
+- Multi Language Deployment
 
 ### Deployment
 ```bash
