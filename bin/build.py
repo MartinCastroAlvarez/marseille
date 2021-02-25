@@ -86,13 +86,14 @@ if not os.path.isdir(MEDIA):
 languages: list = [
     language
     for language in config['Language'].values()
-] + [
+] + [{}]
 for language in languages:
 
     # LANGUAGE SUBDIRECTORY
     # Creating building directory.
-    build: str = os.path.join(BUILD, language['Code'])
-    os.mkdir(build)
+    build: str = os.path.join(BUILD, language.get('Code', ''))
+    if not os.path.isdir(build):
+        os.mkdir(build)
 
     # APPLICATION CONTEXT
     # Loading variables that are available to all templates.
@@ -105,7 +106,7 @@ for language in languages:
         "language": config['Language'],
         "categories": config['Categories'],
         "strings": {
-            k: v[language['Code']]
+            k: v[language.get('Code', 'en')]
             for k, v in config['Strings'].items()
         }
     }
