@@ -24,7 +24,7 @@ footer p { color: {{style.White}}; }
 footer a { color: {{style.White}}; }
 
 /* Header Style */
-header {
+nav {
     background: {{style.Primary}};
 }
 
