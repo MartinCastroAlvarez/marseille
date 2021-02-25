@@ -114,66 +114,250 @@ Strings:
     en: "The K Life"
     es: "The K Life"
     fr: "The K Life"
+  Language:
+    en: "Language"
+    es: "Lenguaje"
+    fr: "TODO"
   Coats:
     en: "Coats"
+    es: "Sacos"
+    fr: "Manteaux"
+  Blazers:
+    en: "Blazers"
+    es: "Chaquetas"
+    fr: "Blazers"
+  Accessories:
+    en: "Accessories"
+    es: "Accesorios"
+    fr: "Accessories"
+  All:
+    en: "View All"
+    es: "Ver Todo"
+    fr: ""
+  JacketsPuffers:
+    en: "Jackets / Puffers"
     es: ""
     fr: ""
   Jackets:
-    en: "Jacket / Puffers"
-    es: "Chaquetas"
-    fr: ""
-  Blazers:
-    en: "Blazers"
+    en: "Jackets"
     es: ""
     fr: ""
-  Dresses:
+  Puffers:
+    en: "Puffers"
+    es: ""
+    fr: ""
+  Denim:
+    en: "Denim"
+    es: ""
+    fr: ""
+  DressesMono:
     en: "Dresses / Mono"
     es: ""
     fr: ""
+  Mini:
+    en: "Mini"
+    es: ""
+    fr: ""
+  Midi:
+    en: "Midi"
+    es: ""
+    fr: ""
+  Maxi:
+    en: "Maxi"
+    es: ""
+    fr: ""
+  JumpSuits:
+    en: "Jump Suits"
+    es: ""
+    fr: ""
+  ShirtsTops:
+    en: "Shirts / Tops"
+    es: ""
+    fr: ""
   Shirts:
-    en: "Shirt / Tops"
+    en: "Shirts"
+    es: ""
+    fr: ""
+  Blouses:
+    en: "Blouses"
+    es: ""
+    fr: ""
+  Tops:
+    en: "Tops"
+    es: ""
+    fr: ""
+  Croctops:
+    en: "Croc Tops"
     es: ""
     fr: ""
   Tshirts:
     en: "T-Shirts"
     es: ""
     fr: ""
+  Basic:
+    en: "Basic"
+    es: ""
+    fr: ""
+  Printed:
+    en: "Printed"
+    es: ""
+    fr: ""
+  Cropped:
+    en: "Cropped"
+    es: ""
+    fr: ""
+  LongSleeve:
+    en: "Long Sleeve"
+    es: ""
+    fr: ""
+  TankTops:
+    en: "Tank Tops"
+    es: ""
+    fr: ""
+  ShortSleeve:
+    en: "Short Sleeve"
+    es: ""
+    fr: ""
   Knitwear:
     en: "Knitwear"
+    es: ""
+    fr: ""
+  Cardigans:
+    en: "Cargidans"
+    es: ""
+    fr: ""
+  Sweatters:
+    en: "Sweaters"
+    es: ""
+    fr: ""
+  KnitTops:
+    en: "Knit Tops"
+    es: ""
+    fr: ""
+  Dresses:
+    en: "Dresses"
+    es: ""
+    fr: ""
+  TurtleNeck:
+    en: "Turtle Neck"
+    es: ""
+    fr: ""
+  Basics:
+    en: "Basics"
     es: ""
     fr: ""
   Pantalones:
     en: "Pantalones"
     es: ""
     fr: ""
+  Office:
+    en: "Office"
+    es: ""
+    fr: ""
+  Legging:
+    en: "Leggings"
+    es: ""
+    fr: ""
+  Joggers:
+    en: "Joggers"
+    es: ""
+    fr: ""
   Jeans:
     en: "Jeans"
     es: ""
     fr: ""
-  Skirts:
+  HighWaist:
+    en: "High Waist"
+    es: ""
+    fr: ""
+  MidWaist:
+    en: "Mid Waist"
+    es: ""
+    fr: ""
+  Slouchy:
+    en: "Slouchy"
+    es: ""
+    fr: ""
+  MomFit:
+    en: "Mom Fit"
+    es: ""
+    fr: ""
+  Baggy:
+    en: "Baggy"
+    es: ""
+    fr: ""
+  Straight:
+    en: "Straight"
+    es: ""
+    fr: ""
+  Slim:
+    en: "Slim"
+    es: ""
+    fr: ""
+  SkirtsShorts:
     en: "Skirts / Shorts"
     es: ""
     fr: ""
+  Mini:
+    en: "Mini"
+    es: ""
+    fr: ""
+  Midi:
+    en: "Midi"
+    es: ""
+    fr: ""
+  Pleated:
+    en: "Pleated"
+    es: ""
+    fr: ""
+  Shorts:
+    en: "Shorts"
+    es: ""
+    fr: ""
+  TShirts:
+    en: "T-Shirts"
+    es: ""
+    fr: ""
   SweatShirt:
-    en: "Sweat-Shirts"
+    en: "Sweat-Shirt"
     es: ""
     fr: ""
   Bags:
     en: "Bags"
     es: ""
     fr: ""
-  Accessories:
-    en: "Accessories"
+  CrossBodyBags:
+    en: "Cross Body Bags"
     es: ""
     fr: ""
-  Language:
-    en: "Language"
-    es: "Lenguaje"
-    fr: "TODO"
-  Other:
-    en: "Other"
-    es: "Otros"
-    fr: "TODO"
+  MidiBags:
+    en: "Midi Bags"
+    es: ""
+    fr: ""
+  LargeBags:
+    en: "Large Bags"
+    es: ""
+    fr: ""
+  Jewerly:
+    en: "Jewerly"
+    es: ""
+    fr: ""
+  Belts:
+    en: "Belts"
+    es: ""
+    fr: ""
+  Sunglasses:
+    en: "Sunglasses"
+    es: ""
+    fr: ""
+  HatsCaps:
+    en: "Hats / Caps"
+    es: ""
+    fr: ""
+  Handkerchiefs:
+    en: "Handkerchiefs"
+    es: ""
+    fr: ""
 
 # --------------------------------------------
 # Links Configuration 
@@ -193,7 +377,7 @@ Link:
 Categories:
   Coats:
     Subcategories:
-      Jackets:
+      JacketsPuffers:
         Filters:
           All:
             filter: ""
@@ -205,7 +389,7 @@ Categories:
             filter: "denim"
   Blazers:
     Subcategories:
-      Dresses:
+      DressesMono:
         Filters:
           All:
             filter: ""
@@ -217,7 +401,7 @@ Categories:
             filter: ""
           JumpSuits:
             filter: ""
-      Shirts:
+      ShirtsTops:
         Filters:
           All:
             filter: ""
@@ -229,7 +413,7 @@ Categories:
             filter: ""
           Croctops:
             filter: ""
-      Tshirts:
+      TShirts:
         Filters:
           All:
             filter: ""
@@ -289,7 +473,7 @@ Categories:
             filter: ""
           Slim:
             filter: ""
-      Skirts:
+      SkirtsShorts:
         Filters:
           All:
             filter: ""
@@ -305,7 +489,7 @@ Categories:
         Filters:
           All:
             filter: ""
-  Other:
+  Accessories:
     Subcategories:
       Bags:
         Filters:
@@ -326,4 +510,8 @@ Categories:
           Belts:
             filter: ""
           Sunglasses:
+            filter: ""
+          HatsCaps:
+            filter: ""
+          Handkerchiefs:
             filter: ""
