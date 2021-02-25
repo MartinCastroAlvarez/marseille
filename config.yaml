@@ -154,7 +154,7 @@ Strings:
     en: "Skirts / Shorts"
     es: ""
     fr: ""
-  Sweat:
+  SweatShirt:
     en: "Sweat-Shirts"
     es: ""
     fr: ""
@@ -194,29 +194,136 @@ Categories:
   Coats:
     Subcategories:
       Jackets:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Jackets:
+            filter: "jackets"
+          Puffers:
+            filter: "puffers"
+          Denim:
+            filter: "denim"
   Blazers:
-    Lorem: Ipsum
     Subcategories:
       Dresses:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Mini:
+            filter: ""
+          Midi:
+            filter: ""
+          Maxi:
+            filter: ""
+          JumpSuits:
+            filter: ""
       Shirts:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Shirts:
+            filter: ""
+          Blouses:
+            filter: ""
+          Tops:
+            filter: ""
+          Croctops:
+            filter: ""
       Tshirts:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Basic:
+            filter: ""
+          Printed:
+            filter: ""
+          Cropped:
+            filter: ""
+          LongSleeve:
+            filter: ""
+          TankTops:
+            filter: ""
+          ShortSleeve:
+            filte: ""
       Knitwear:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Cardigans:
+            filter: ""
+          Sweatters:
+            filter: ""
+          KnitTops:
+            filter: ""
+          Dresses:
+            filter: ""
+          TurtleNeck:
+            filter: ""
+          Basics:
+            filter: ""
       Pantalones:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Office:
+            filter: ""
+          Legging:
+            filter: ""
+          Joggers:
+            filter: ""
       Jeans:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          HighWaist:
+            filter: ""
+          MidWaist:
+            filter: ""
+          Slouchy:
+            filter: ""
+          MomFit:
+            filter: ""
+          Baggy:
+            filter: ""
+          Straight:
+            filter: ""
+          Slim:
+            filter: ""
       Skirts:
-        Lorem: Ipsum
-      Sweat:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Mini:
+            filter: ""
+          Midi:
+            filter: ""
+          Pleated:
+            filter: ""
+          Shorts:
+            filter: ""
+      SweatShirt:
+        Filters:
+          All:
+            filter: ""
   Other:
     Subcategories:
       Bags:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          CrossBodyBags:
+            filter: ""
+          MidiBags:
+            filter: ""
+          LargeBags:
+            filter: ""
       Accessories:
-        Lorem: Ipsum
+        Filters:
+          All:
+            filter: ""
+          Jewerly:
+            filter: ""
+          Belts:
+            filter: ""
+          Sunglasses:
+            filter: ""
