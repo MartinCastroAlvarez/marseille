@@ -83,7 +83,11 @@ if not os.path.isdir(MEDIA):
 
 # MULTI-LANGUAGE
 # Iterating over each supported language and rendering a new static app.
-for language in config['Language'].values():
+languages: list = [
+    language
+    for language in config['Language'].values()
+] + [
+for language in languages:
 
     # LANGUAGE SUBDIRECTORY
     # Creating building directory.
