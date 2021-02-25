@@ -48,7 +48,7 @@ Style:
 # Assets Configuration
 # --------------------------------------------
 Assets:
-  Logo: "the k look v2.png"
+  Logo: "brand/the k look v2.png"
 
 # --------------------------------------------
 # Strings Configuration

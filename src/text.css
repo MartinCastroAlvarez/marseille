@@ -1,0 +1,68 @@
+/* H1 Title Style */
+h1 {
+    font-family: "Lalezar", "Poppins", sans-serif;
+    color: {{style.Black}};
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+/* H2 Title Style */
+h2 {
+    font-family: "Lalezar", "Poppins", sans-serif;
+    color: {{style.Black}};
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+/* H3 Title Style */
+h3 {
+    font-family: "Lalezar", "Poppins", sans-serif;
+    color: {{style.Black}};
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+/* H4 Title Style */
+h4 {
+    color: {{style.Black}};
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+/* H5 Title Style */
+h5 {
+    color: {{style.Black}};
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+/* H6 Title Style */
+h6 {
+    color: {{style.Black}};
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+/* Paragraph Style */
+p {
+    color: {{style.Black}};
+    padding: 0;
+}
+
+/* Link Style */
+a {
+    color: {{style.Black}};
+    cursor: pointer;
+}

@@ -127,7 +127,7 @@ for language in config['Language'].values():
             print(f'Web template: {filename}')
             template: str = jinja.get_template(filename)
             html: str = template.render(**context)
-            html: str = html if filename.endswith(".js") else minify(html)
+            # html: str = html if filename.endswith(".js") else minify(html)
             with open(target, 'w') as file_handler:
                 file_handler.write(html)
             print(f'Web page rendered: {target}')

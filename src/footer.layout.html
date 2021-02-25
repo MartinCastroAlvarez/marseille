@@ -1,28 +1,27 @@
-<footer>
+<footer class="padding-lg">
 
     {# FOOTER TOP SECTIONS #}
     <div class="row">
 
         {# APPLICATION LOGO #}
-        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-            <div>
-                <a href="index.html">
-                    <img src="assets/{{assets.Logo}}" width="100px">
-                </a>
-            </div>
-            <div>
-                <p>{{strings.LoremIpsum}}</p>
-            </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <a href="index.html">
+                <img src="assets/brand/WHITE back v2.jpg" width="100%"/>
+            </a>
         </div>  
         {# END OF APPLICATION LOGO #}
 
         {# LANGUAGES #}
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 center padding-sm">
+            <br/>
             <h4>{{strings.Language}}</h4>
+            <br/>
             <ul>
                 {% for l in language.values() %}
-                    <li>
-                        <a href="../{{l.Code}}/index.html">{{l.Title}}</a>
+                    <li class="padding-xs">
+                        <p>
+                            <a href="../{{l.Code}}/index.html">{{l.Title}}</a>
+                        </p>
                     </li>
                 {% endfor %}
             </ul>
@@ -30,37 +29,55 @@
         {# END OF LANGUAGES #}
 
         {# LIFESTYLE #}
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 center padding-sm">
+            <br/>
             <h4>{{strings.Lifestyle}}</h4>
+            <br/>
             <ul>
-                <li>
-                    <a href="{{link.Music}}">{{strings.Music}}</a>
+                <li class="padding-xs">
+                    <p>
+                        <a href="{{link.Music}}">{{strings.Music}}</a>
+                    </p>
                 </li>
-                <li>
-                    <a href="{{link.Food}}">{{strings.Food}}</a>
+                <li class="padding-xs">
+                    <p>
+                        <a href="{{link.Food}}">{{strings.Food}}</a>
+                    </p>
                 </li>
-                <li>
-                    <a href="{{link.Life}}">{{strings.Life}}</a>
+                <li class="padding-xs">
+                    <p>
+                        <a href="{{link.Life}}">{{strings.Life}}</a>
+                    </p>
                 </li>
             </ul>
         </div>
         {# END OF LIFESTYLE #}
 
         {# ABOUT #}
-        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 center padding-sm">
+            <br/>
             <h4>{{application.Name}}</h4>
+            <br/>
             <ul>
-                <li>
-                    <a href="contact.html">{{strings.ContactUs}}</a>
+                <li class="padding-xs">
+                    <p>
+                        <a href="contact.html">{{strings.ContactUs}}</a>
+                    </p>
                 </li>
-                <li>
-                    <a href="about.html">{{strings.AboutUs}}</a>
+                <li class="padding-xs">
+                    <p>
+                        <a href="about.html">{{strings.AboutUs}}</a>
+                    </p>
                 </li>
-                <li>
-                    <a href="legal.html">{{strings.TermsOfService}}</a>
+                <li class="padding-xs">
+                    <p>
+                        <a href="legal.html">{{strings.TermsOfService}}</a>
+                    </p>
                 </li>
-                <li>
-                    <a href="privacy.html">{{strings.PrivacyPolicy}}</a>
+                <li class="padding-xs">
+                    <p>
+                        <a href="privacy.html">{{strings.PrivacyPolicy}}</a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -70,11 +87,13 @@
     {# END OF FOOTER TOP SECTIONS #}
 
     {# FOOTER COPYRIGHT #}
-    <center>
-        <p>
-            {{strings.Copyright}} - {{application.Name}} {{application.Version}}
-        </p>
-    </center>
+    <br/>
+    <br/>
+    <p class="center padding-sm">
+        {{strings.Copyright}}
+        -
+        {{application.Name}} {{application.Version}}
+    </p>
     {# END OF FOOTER COPYRIGHT #}
 
 </footer>
