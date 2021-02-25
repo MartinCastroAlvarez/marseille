@@ -28,6 +28,7 @@ footer a { color: {{style.White}}; }
     background: {{style.Primary}};
     display: block;
     width: 100%;
+    margin: 0;
 }
 
 /* Style Extensions */
