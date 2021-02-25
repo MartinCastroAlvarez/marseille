@@ -24,8 +24,10 @@ footer p { color: {{style.White}}; }
 footer a { color: {{style.White}}; }
 
 /* Header Style */
-nav {
+.header {
     background: {{style.Primary}};
+    display: block;
+    width: 100%;
 }
 
 /* Style Extensions */
