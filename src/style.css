@@ -30,6 +30,42 @@ footer a { color: {{style.White}}; }
     width: 100%;
     margin: 0;
 }
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-between;
+    /*
+flex-start: Alinea elementos al lado izquierdo del contenedor.
+flex-end: Alinea elementos al lado derecho del contenedor.
+center: Alinea elementos en el centro del contenedor.
+space-between: Muestra elementos con la misma distancia entre ellos.
+space-around: Muestra elementos con la misma separación alrededor de ellos.
+*/
+    align-items: center;
+    /*
+flex-start: Alinea elementos a la parte superior del contenedor.
+flex-end: Alinea elementos a la parte inferior del contenedor.
+center: Alinea elementos en el centro (verticalmente hablando) del contenedor.
+baseline: Muestra elementos en la línea base del contenedor
+stretch: Elementos se estiran para ajustarse al contenedo
+    */
+    flex-direction: row;
+/*
+row: Elementos son colocados en la misma dirección del texto.
+row-reverse: Elementos son colocados en la dirección opuesta al texto.
+column: Elementos se colocan de arriba hacia abajo.
+column-reverse: Elementos se colocan de abajo hacia arriba.
+*/
+    flex-wrap: wrap;
+/*
+ * nowrap: Cada elemento se ajusta en una sola línea.
+wrap: los elementos se envuelven alrededor de líneas adicionales.
+wrap-reverse: Los elementos se envuelven alrededor de líneas adicionales en reversa.*/
+flex-flow: column-reverse wrap;
+flex-wrap: wrap-reverse;
+align-content: space-between;
+justify-content: center;
+}
 
 /* Style Extensions */
 .center { text-align: center; }

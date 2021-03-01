@@ -17,20 +17,22 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 # ROOT DIRECTORY
 # Getting current working directory.
-ROOT: str = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print(f'Root directory: {ROOT}')
+ROOT: str = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
+print(f"Root directory: {ROOT}")
 
 # CONFIGURATION
 # Loading application configuration
-CONFIG: str = os.path.join(ROOT, 'config.yaml')
-print(f'Config file: {CONFIG}')
+CONFIG: str = os.path.join(ROOT, "config.yaml")
+print(f"Config file: {CONFIG}")
 if not os.path.isfile(CONFIG):
     raise OSError(CONFIG)
-with open(CONFIG, 'r') as file_handler:
+with open(CONFIG, "r") as file_handler:
     config: dict = yaml.full_load(file_handler)
 
 # Loading configuration file.
-SECRETS: str = os.path.join(os.environ['HOME'], ".marseille")
+SECRETS: str = os.path.join(os.environ["HOME"], ".marseille")
 if not os.path.isfile(SECRETS):
     raise RuntimeError("Invalid config file.", SECRETS)
 with open(SECRETS) as file_handler:
@@ -38,17 +40,17 @@ with open(SECRETS) as file_handler:
 
 # WEB DIRECTORY
 # Getting web source directory.
-WEB: str = os.path.join(ROOT, config['Build']['Templates'])
-print(f'Web directory: {WEB}')
+WEB: str = os.path.join(ROOT, config["Build"]["Templates"])
+print(f"Web directory: {WEB}")
 if not os.path.isdir(WEB):
     raise OSError(WEB)
 
 # BUILD DIRECTORY
 # Getting web build directory.
-BUILD: str = os.path.join(ROOT, config['Build']['Package'])
-print(f'Build directory: {BUILD}')
+BUILD: str = os.path.join(ROOT, config["Build"]["Package"])
+print(f"Build directory: {BUILD}")
 if os.path.isdir(BUILD):
-    print(f'Cleaning existing build directory: {BUILD}')
+    print(f"Cleaning existing build directory: {BUILD}")
     shutil.rmtree(BUILD)
 os.mkdir(BUILD)
 
@@ -56,13 +58,17 @@ os.mkdir(BUILD)
 # Setting up Jinja2.
 jinja: Environment = Environment(
     loader=FileSystemLoader(WEB),
-    autoescape=select_autoescape(['html', 'xml'])
+    autoescape=select_autoescape(["html", "xml"]),
 )
 
 # RECOMMENDER SYSTEM
 # Shuffling content to provide novelty.
 # https://stackoverflow.com/questions/31607710
-def recommend(data: dict) -> typing.Generator[typing.Tuple[str, list], None, None]:
+
+
+def recommend(
+    data: dict,
+) -> typing.Generator[typing.Tuple[str, list], None, None]:
     """
     Recommender System.
     """
@@ -72,43 +78,44 @@ def recommend(data: dict) -> typing.Generator[typing.Tuple[str, list], None, Non
         values: list = data[key]
         random.shuffle(values)
         yield key, values
-jinja.filters['recommend'] = recommend
+
+
+jinja.filters["recommend"] = recommend
 
 # ASSETS DIRECTORY
 # Getting web source directory.
-MEDIA: str = os.path.join(ROOT, config['Build']['Media'])
-print(f'Media directory: {MEDIA}')
+MEDIA: str = os.path.join(ROOT, config["Build"]["Media"])
+print(f"Media directory: {MEDIA}")
 if not os.path.isdir(MEDIA):
     raise OSError(MEDIA)
 
 # MULTI-LANGUAGE
 # Iterating over each supported language and rendering a new static app.
 languages: list = [
-    language
-    for language in config['Language'].values()
+    language for language in config["Language"].values()
 ] + [{}]
 for language in languages:
 
     # LANGUAGE SUBDIRECTORY
     # Creating building directory.
-    build: str = os.path.join(BUILD, language.get('Code', ''))
+    build: str = os.path.join(BUILD, language.get("Code", ""))
     if not os.path.isdir(build):
         os.mkdir(build)
 
     # APPLICATION CONTEXT
     # Loading variables that are available to all templates.
     context: dict = {
-        "application": config['Application'],
-        "url": secrets['url'],
-        "style": config['Style'],
-        "assets": config['Assets'],
-        "link": config['Link'],
-        "language": config['Language'],
-        "categories": config['Categories'],
+        "application": config["Application"],
+        "url": secrets["url"],
+        "style": config["Style"],
+        "assets": config["Assets"],
+        "link": config["Link"],
+        "language": config["Language"],
+        "categories": config["Categories"],
         "strings": {
-            k: v[language.get('Code', 'en')]
-            for k, v in config['Strings'].items()
-        }
+            k: v[language.get("Code", "en")]
+            for k, v in config["Strings"].items()
+        },
     }
 
     # RENDERING WEB VIEWS
@@ -121,27 +128,32 @@ for language in languages:
             # DIRECTORIES
             # Creating a directory on the build directory.
             os.mkdir(os.path.join(build, filename))
-        elif filename.endswith('.layout.html'):
+        elif filename.endswith(".layout.html"):
             # LAYOUT
             # Ignoring build components.
             pass
-        elif filename.split(".")[-1] in {"html", "css", "webmanifest", "js"}:
+        elif filename.split(".")[-1] in {
+            "html",
+            "css",
+            "webmanifest",
+            "js",
+        }:
             # STATIC CONTENT
             # Rendering HTML, CSS and JS files.
             target: str = os.path.join(build, filename)
-            print(f'Web template: {filename}')
+            print(f"Web template: {filename}")
             template: str = jinja.get_template(filename)
             html: str = template.render(**context)
             # html: str = html if filename.endswith(".js") else minify(html)
-            with open(target, 'w') as file_handler:
+            with open(target, "w") as file_handler:
                 file_handler.write(html)
-            print(f'Web page rendered: {target}')
+            print(f"Web page rendered: {target}")
         else:
             # MEDIA CONTENT
             # Rendering images, audio and video.
             source: str = os.path.join(WEB, filename)
             target: str = os.path.join(build, filename)
-            print(f'Adding media: {source}')
+            print(f"Adding media: {source}")
             shutil.copy2(source, target)
 
     # COPYING ASSETS
@@ -149,11 +161,13 @@ for language in languages:
     os.chdir(MEDIA)
     os.mkdir(os.path.join(build, "assets"))
     for filename in glob.iglob("**", recursive=True):
-        print(f'Media file: {filename}')
+        print(f"Media file: {filename}")
         if os.path.isdir(filename):
-            os.mkdir(os.path.join(build, 'assets', filename))
+            os.mkdir(os.path.join(build, "assets", filename))
         else:
-            shutil.copy2(filename, os.path.join(build, 'assets', filename))
+            shutil.copy2(
+                filename, os.path.join(build, "assets", filename)
+            )
 
 # THE END
-print(f'Web built successfully!')
+print(f"Web built successfully!")
