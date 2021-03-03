@@ -4,13 +4,16 @@
             style="background-image: url(assets/{{category.Image}})"
             class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
             <div class="overlay padding-md center">
-                <h3>{{strings[id]}}</h3>
+                <h3>
+                    <a href="search.html?title={{strings[id]}}&tag={{category.Filter}}">{{strings[id]}}</a>
+                </h3>
+
                 <br/>
                 <ul>
                     {% for id, subcategory in category.Subcategories.items() %}
                         {% if strings[id] %}
                             <li class="padding-xs">
-                                <a href="search.html?category={{subcategory.Filter}}">{{strings[id]}}</a>
+                                <a href="search.html?title={{strings[id]}}&tag={{subcategory.Filter}}">{{strings[id]}}</a>
                             </li>
                         {% endif %}
                     {% endfor %}

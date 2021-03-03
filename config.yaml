@@ -86,19 +86,19 @@ Strings:
   PrivacyPolicy:
     en: "Privacy Policy"
     es: "Política de Privacidad"
-    fr: "TODO"
+    fr: "Lorem Ipsum"
   TermsOfService:
     en: "Terms of Service"
     es: "Términos y Condiciones"
-    fr: "TODO"
+    fr: "Lorem Ipsum"
   Description:
-    en: "TODO"
-    es: "TODO"
-    fr: "TODO"
+    en: "Lorem Ipsum"
+    es: "Lorem Ipsum"
+    fr: "Lorem Ipsum"
   Keywords:
-    en: "TODO"
-    es: "TODO"
-    fr: "TODO"
+    en: "Lorem Ipsum"
+    es: "Lorem Ipsum"
+    fr: "Lorem Ipsum"
   Lifestyle:
     en: "Lifestyle"
     es: "Estilo de Vida"
@@ -118,7 +118,7 @@ Strings:
   Language:
     en: "Language"
     es: "Lenguaje"
-    fr: "TODO"
+    fr: "Lorem Ipsum"
   Coats:
     en: "Coats"
     es: "Sacos"
@@ -354,9 +354,21 @@ Strings:
   FastFreeDelivery:
     en: "Fast & Free Delivery"
     es: "Envío Gratis y Rápido"
-    fr: "TODO"
+    fr: "Lorem Ipsum"
   Lorem:
     en: "Lorem Ipsum Dolor Sit Amet"
+    es: "Lorem Ipsum Dolor Sit Amet"
+    fr: "Lorem Ipsum Dolor Sit Amet"
+  FirstCollection:
+    en: "Collection Houses Our First-Ever"
+    es: "Lorem Ipsum Dolor Sit Amet"
+    fr: "Lorem Ipsum Dolor Sit Amet"
+  SecondCollection:
+    en: "Established fact that by the readable content"
+    es: "Lorem Ipsum Dolor Sit Amet"
+    fr: "Lorem Ipsum Dolor Sit Amet"
+  ThirdCollection:
+    en: "Established fact that by the readable content"
     es: "Lorem Ipsum Dolor Sit Amet"
     fr: "Lorem Ipsum Dolor Sit Amet"
 
@@ -364,13 +376,13 @@ Strings:
 # Links Configuration 
 # --------------------------------------------
 Link:
-  Instagram: "#"
-  Facebook: "#"
-  Twitter: "#"
-  Pinterest: "#"
-  Music: "#"
-  Food: "#"
-  Life: "#"
+  Instagram: "404.html"
+  Facebook: "404.html"
+  Twitter: "404.html"
+  Pinterest: "404.html"
+  Music: "404.html"
+  Food: "404.html"
+  Life: "404.html"
 
 # --------------------------------------------
 # Categories Configuration
@@ -378,8 +390,10 @@ Link:
 Categories:
   Coats:
     Image: "categories/jackets.jpeg"
+    Filter: "all-coats"
     Subcategories:
       JacketsPuffers:
+        Filter: "all-jackets"
         Filters:
           All:
             Filter: "all-jackets"
@@ -391,8 +405,10 @@ Categories:
             Filter: "denim"
   Blazers:
     Image: "categories/blazers.jpeg"
+    Filter: "all-blazers"
     Subcategories:
       DressesMono:
+        Filter: "all-dresses"
         Filters:
           All:
             Filter: "all-dresses"
@@ -405,6 +421,7 @@ Categories:
           JumpSuits:
             Filter: "jump-suites"
       ShirtsTops:
+        Filter: "all-shirts"
         Filters:
           All:
             Filter: "all-shirts"
@@ -417,6 +434,7 @@ Categories:
           CropTops:
             Filter: "crop-tops"
       TShirts:
+        Filter: "all-t-shirts"
         Filters:
           All:
             Filter: "all-t-shirts"
@@ -433,6 +451,7 @@ Categories:
           ShortSleeve:
             Filter: "short-sleeve-t-shirts"
       Knitwear:
+        Filter: "all-knit-wear"
         Filters:
           All:
             Filter: "all-knitwear"
@@ -449,6 +468,7 @@ Categories:
           Basics:
             Filter: "basic-dresses"
       Pantalones:
+        Filter: "all-pantalones"
         Filters:
           All:
             Filter: "all-pantalones"
@@ -459,6 +479,7 @@ Categories:
           Joggers:
             Filter: "joggers"
       Jeans:
+        Filter: "all-jeans"
         Filters:
           All:
             Filter: "all-jeans"
@@ -477,9 +498,10 @@ Categories:
           Slim:
             Filter: "slim"
       SkirtsShorts:
+        Filter: "all-skirt-shorts"
         Filters:
           All:
-            Filter: "all-skirts"
+            Filter: "all-skirts-shorts"
           Mini:
             Filter: "mini-skirts"
           Midi:
@@ -489,13 +511,16 @@ Categories:
           Shorts:
             Filter: "short-skirts"
       SweatShirt:
+        Filter: "all-sweat-shirts"
         Filters:
           All:
             Filter: "all-sweat-shirts"
   Accessories:
+    Filter: "all-accessories"
     Image: "categories/accessories.jpeg"
     Subcategories:
       Bags:
+        Filter: "all-bags"
         Filters:
           All:
             Filter: "all-bags"
@@ -506,6 +531,7 @@ Categories:
           LargeBags:
             Filter: "large-bags"
       Accessories:
+        Filter: "all-accessories"
         Filters:
           All:
             Filter: "all-accessories"
@@ -519,3 +545,17 @@ Categories:
             Filter: "hats-caps"
           Handkerchiefs:
             Filter: "handkerchiefs"
+
+# --------------------------------------------
+# Collections Configuration
+# --------------------------------------------
+Collections:
+  FirstCollection:
+    Image: "collections/1.png"
+    Filter: "collection-1"
+  SecondCollection:
+    Image: "collections/2.png"
+    Filter: "collection-2"
+  ThirdCollection:
+    Image: "collections/3.png"
+    Filter: "collection-3"
