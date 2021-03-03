@@ -1,6 +1,7 @@
 /* H1 Title Style */
 h1 {
     font-family: "Lalezar", "Poppins", sans-serif;
+    user-select: none;
     color: {{style.Black}};
     padding: 0;
     margin: 0;
@@ -11,6 +12,7 @@ h1 {
 /* H2 Title Style */
 h2 {
     font-family: "Lalezar", "Poppins", sans-serif;
+    user-select: none;
     color: {{style.Black}};
     padding: 0;
     margin: 0;
@@ -21,6 +23,7 @@ h2 {
 /* H3 Title Style */
 h3 {
     font-family: "Lalezar", "Poppins", sans-serif;
+    user-select: none;
     color: {{style.Black}};
     padding: 0;
     margin: 0;
@@ -31,6 +34,7 @@ h3 {
 /* H4 Title Style */
 h4 {
     color: {{style.Black}};
+    user-select: none;
     padding: 0;
     margin: 0;
     display: block;
@@ -40,6 +44,7 @@ h4 {
 /* H5 Title Style */
 h5 {
     color: {{style.Black}};
+    user-select: none;
     padding: 0;
     margin: 0;
     display: block;
@@ -49,6 +54,7 @@ h5 {
 /* H6 Title Style */
 h6 {
     color: {{style.Black}};
+    user-select: none;
     padding: 0;
     margin: 0;
     display: block;
@@ -58,11 +64,19 @@ h6 {
 /* Paragraph Style */
 p {
     color: {{style.Black}};
+    user-select: none;
     padding: 0;
 }
 
 /* Link Style */
-a {
-    color: {{style.Black}};
+a:link, a:visited, a:active {
+    user-select: text;
+    color: {{style.Primary}};
+    text-decoration: none;
     cursor: pointer;
+}
+a:hover {
+    user-select: text;
+    color: {{style.Tertiary}};
+    text-decoration: none;
 }

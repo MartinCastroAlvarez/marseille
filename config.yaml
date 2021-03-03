@@ -43,6 +43,7 @@ Style:
   DarkGray: "#7f8C8D"
   Primary: "#3498DB"
   Secondary: "#2980B9"
+  Tertiary: "#9B59B6"
 
 # --------------------------------------------
 # Assets Configuration
@@ -346,6 +347,18 @@ Strings:
     en: "Handkerchiefs"
     es: "Bufandas"
     fr: "Mouchoir"
+  Legal:
+    en: "Legal"
+    es: "Legal"
+    fr: "Legal"
+  FastFreeDelivery:
+    en: "Fast & Free Delivery"
+    es: "Envío Gratis y Rápido"
+    fr: "TODO"
+  Lorem:
+    en: "Lorem Ipsum Dolor Sit Amet"
+    es: "Lorem Ipsum Dolor Sit Amet"
+    fr: "Lorem Ipsum Dolor Sit Amet"
 
 # --------------------------------------------
 # Links Configuration 

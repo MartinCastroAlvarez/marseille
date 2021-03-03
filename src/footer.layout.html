@@ -3,13 +3,39 @@
     {# FOOTER TOP SECTIONS #}
     <div class="row">
 
-        {# APPLICATION LOGO #}
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <a href="index.html">
-                <img src="assets/brand/WHITE back v2.jpg" width="100%"/>
-            </a>
-        </div>  
-        {# END OF APPLICATION LOGO #}
+        {# ABOUT #}
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 center padding-sm">
+            <br/>
+            <h4>{{application.Name}}</h4>
+            <br/>
+            <ul>
+                <li class="padding-xs">
+                    <p>
+                        <a href="{{link.Instagram}}" target="instagram">
+                            <i class="fa fa-twitter"></i>
+                            Twitter
+                        </a>
+                    </p>
+                </li>
+                <li class="padding-xs">
+                    <p>
+                        <a href="{{link.Facebook}}" target="facebook">
+                            <i class="fa fa-facebook-f"></i>
+                            Facebook
+                        </a>
+                    </p>
+                </li>
+                <li class="padding-xs">
+                    <p>
+                        <a href="{{link.Pinterest}}" target="pinterest">
+                            <i class="fa fa-pinterest-p"></i>
+                            Instagram
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        {# END OF ABOUT #}
 
         {# LANGUAGES #}
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 center padding-sm">
@@ -56,7 +82,7 @@
         {# ABOUT #}
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 center padding-sm">
             <br/>
-            <h4>{{application.Name}}</h4>
+            <h4>{{strings.Legal}}</h4>
             <br/>
             <ul>
                 <li class="padding-xs">
