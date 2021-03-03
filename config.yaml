@@ -105,7 +105,7 @@ Strings:
     fr: "Style de Vie"
   Music:
     en: "Music"
-    es: "Musica"
+    es: "Música"
     fr: "Musique"
   Food:
     en: "Food"
@@ -377,6 +377,7 @@ Link:
 # --------------------------------------------
 Categories:
   Coats:
+    Image: "categories/jackets.jpeg"
     Subcategories:
       JacketsPuffers:
         Filters:
@@ -389,6 +390,7 @@ Categories:
           Denim:
             filter: "denim"
   Blazers:
+    Image: "categories/blazers.jpeg"
     Subcategories:
       DressesMono:
         Filters:
@@ -491,6 +493,7 @@ Categories:
           All:
             filter: ""
   Accessories:
+    Image: "categories/accessories.jpeg"
     Subcategories:
       Bags:
         Filters:

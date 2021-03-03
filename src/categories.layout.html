@@ -1,16 +1,23 @@
-<div class="row">
+<div class="categories row">
     {% for id, category in categories.items() %}
-        <div class="col-lg-2 col-lg-2 col-md-3 col-sm-3">
-            <h4>{{strings[id]}}</h4>
-            <ul>
-                {% for id, subcategory in category.Subcategories.items() %}
-                    {% if strings[id] %}
-                        <li>
-                            <a href="#">{{strings[id]}}</a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+        <div
+            style="background-image: url(assets/{{category.Image}})"
+            class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+            <div class="overlay padding-md center">
+                <br/>
+                <h3>{{strings[id]}}</h3>
+                <br/>
+                <ul>
+                    {% for id, subcategory in category.Subcategories.items() %}
+                        {% if strings[id] %}
+                            <li class="padding-xs">
+                                <a href="#">{{strings[id]}}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     {% endfor %}
 </div>
+

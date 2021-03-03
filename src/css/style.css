@@ -55,6 +55,28 @@ footer a { color: {{style.White}}; }
     width: 50px;
 }
 
+/* Shipping Style */
+.categories {
+    background: {{style.Silver}};
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+.categories > div {
+    display: block;
+    height: 400px;
+    background-position: fixed;
+    background-size: cover;
+    padding: 0px;
+    display: flex;
+    align-items: stretch;
+}
+.categories .overlay {
+    background: rgba(255, 255, 255, 0.7);
+    width: 100%;
+    display: block;
+}
+
 /* Style Extensions */
 .center { text-align: center; }
 .padding-lg { padding: 5em; }
