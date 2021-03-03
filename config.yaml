@@ -382,140 +382,140 @@ Categories:
       JacketsPuffers:
         Filters:
           All:
-            filter: ""
+            Filter: "all-jackets"
           Jackets:
-            filter: "jackets"
+            Filter: "jackets"
           Puffers:
-            filter: "puffers"
+            Filter: "puffers"
           Denim:
-            filter: "denim"
+            Filter: "denim"
   Blazers:
     Image: "categories/blazers.jpeg"
     Subcategories:
       DressesMono:
         Filters:
           All:
-            filter: ""
+            Filter: "all-dresses"
           Mini:
-            filter: ""
+            Filter: "mini-dresses"
           Midi:
-            filter: ""
+            Filter: "midi-dresses"
           Maxi:
-            filter: ""
+            Filter: "maxi-dresses"
           JumpSuits:
-            filter: ""
+            Filter: "jump-suites"
       ShirtsTops:
         Filters:
           All:
-            filter: ""
+            Filter: "all-shirts"
           Shirts:
-            filter: ""
+            Filter: "shirts"
           Blouses:
-            filter: ""
+            Filter: "blouses"
           Tops:
-            filter: ""
+            Filter: "tops"
           CropTops:
-            filter: ""
+            Filter: "crop-tops"
       TShirts:
         Filters:
           All:
-            filter: ""
+            Filter: "all-t-shirts"
           Basics:
-            filter: ""
+            Filter: "basic-t-shirts"
           Printed:
-            filter: ""
+            Filter: "printed-t-shirts"
           Cropped:
-            filter: ""
+            Filter: "cropped-t-shirts"
           LongSleeve:
-            filter: ""
+            Filter: "long-sleeve-t-shirts"
           TankTops:
-            filter: ""
+            Filter: "tank-tops-t-shirts"
           ShortSleeve:
-            filte: ""
+            Filter: "short-sleeve-t-shirts"
       Knitwear:
         Filters:
           All:
-            filter: ""
+            Filter: "all-knitwear"
           Cardigans:
-            filter: ""
+            Filter: "cardigans"
           Sweatters:
-            filter: ""
+            Filter: "sweatters"
           KnitTops:
-            filter: ""
+            Filter: "knit-tops"
           Dresses:
-            filter: ""
+            Filter: "knit-dresses"
           TurtleNeck:
-            filter: ""
+            Filter: "turtle-neck"
           Basics:
-            filter: ""
+            Filter: "basic-dresses"
       Pantalones:
         Filters:
           All:
-            filter: ""
+            Filter: "all-pantalones"
           Office:
-            filter: ""
+            Filter: "office"
           Legging:
-            filter: ""
+            Filter: "leggings"
           Joggers:
-            filter: ""
+            Filter: "joggers"
       Jeans:
         Filters:
           All:
-            filter: ""
+            Filter: "all-jeans"
           HighWaist:
-            filter: ""
+            Filter: "high-waist"
           MidWaist:
-            filter: ""
+            Filter: "mid-waist"
           Slouchy:
-            filter: ""
+            Filter: "slouchy"
           MomFit:
-            filter: ""
+            Filter: "mom-fit"
           Baggy:
-            filter: ""
+            Filter: "baggy"
           Straight:
-            filter: ""
+            Filter: "straight"
           Slim:
-            filter: ""
+            Filter: "slim"
       SkirtsShorts:
         Filters:
           All:
-            filter: ""
+            Filter: "all-skirts"
           Mini:
-            filter: ""
+            Filter: "mini-skirts"
           Midi:
-            filter: ""
+            Filter: "midi-skirts"
           Pleated:
-            filter: ""
+            Filter: "pleated-skirts"
           Shorts:
-            filter: ""
+            Filter: "short-skirts"
       SweatShirt:
         Filters:
           All:
-            filter: ""
+            Filter: "all-sweat-shirts"
   Accessories:
     Image: "categories/accessories.jpeg"
     Subcategories:
       Bags:
         Filters:
           All:
-            filter: ""
+            Filter: "all-bags"
           CrossBodyBags:
-            filter: ""
+            Filter: "cross-body-bags"
           MidiBags:
-            filter: ""
+            Filter: "midi-bags"
           LargeBags:
-            filter: ""
+            Filter: "large-bags"
       Accessories:
         Filters:
           All:
-            filter: ""
+            Filter: "all-accessories"
           Jewerly:
-            filter: ""
+            Filter: "jewerly"
           Belts:
-            filter: ""
+            Filter: "belts"
           Sunglasses:
-            filter: ""
+            Filter: "sunglasses"
           HatsCaps:
-            filter: ""
+            Filter: "hats-caps"
           Handkerchiefs:
-            filter: ""
+            Filter: "handkerchiefs"

@@ -10,7 +10,7 @@
                     {% for id, subcategory in category.Subcategories.items() %}
                         {% if strings[id] %}
                             <li class="padding-xs">
-                                <a href="#">{{strings[id]}}</a>
+                                <a href="search.html?category={{subcategory.Filter}}">{{strings[id]}}</a>
                             </li>
                         {% endif %}
                     {% endfor %}
