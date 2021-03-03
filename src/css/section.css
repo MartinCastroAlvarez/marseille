@@ -59,14 +59,53 @@ footer a { color: {{style.White}}; }
 .categories > div {
     display: block;
     height: 400px;
-    background-position: fixed;
+    background-position: center;
     background-size: cover;
     padding: 0px;
     display: flex;
     align-items: stretch;
 }
 .categories .overlay {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     width: 100%;
     display: block;
+}
+.categories h3 {
+    color: {{style.White}};
+}
+.categories a {
+    color: {{style.White}};
+}
+
+/* Collections Style */
+.collections {
+    background: {{style.White}};
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+.collections > div > div {
+    display: block;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    padding: 0px;
+    display: flex;
+    align-items: stretch;
+}
+.collections .overlay {
+    background: rgba(255, 255, 255, 0.3);
+    width: 100%;
+    display: grid;
+    align-items: flex-end;
+    align-items: space-around;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+.collections a {
+    border: 3px solid {{style.Black}};
+    color: {{style.Black}};
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 20px;
 }

@@ -371,6 +371,10 @@ Strings:
     en: "Established fact that by the readable content"
     es: "Lorem Ipsum Dolor Sit Amet"
     fr: "Lorem Ipsum Dolor Sit Amet"
+  ViewMore:
+    en: "View More"
+    es: "Ver Mas"
+    fr: "Lorem Ipsum"
 
 # --------------------------------------------
 # Links Configuration 
