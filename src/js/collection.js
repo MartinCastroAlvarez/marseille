@@ -1,14 +1,14 @@
+// Local Store Cache.
+const COLLECTION_STORAGE_KEY = "klook-collection-"
+
 // Handle the Form state with this flag.
 let $isCollectionLoading = false
 
 // Handle GET request to the backend.
 const getCollection = async ($method, $id) => {
-    console.log("Method:", $method)
-    console.log("ID:", $id)
     // Start being busy.
     if ($isCollectionLoading) return
     $isCollectionLoading = true
-    // Hide errors.
     // Send request to the API.
     return $.ajax({
         type: $method,
@@ -22,19 +22,15 @@ const getCollection = async ($method, $id) => {
         // Handle successful requests.
         // Errors might still return a 200 OK.
         success: (xhr, textStatus) => {
-            console.log("Response:", xhr, textStatus)
             if (xhr.head.error) {
-                // pass
+                console.error("Error:", xhr, xhr.head)
             } else {
-                alert(xhr.body.collection)
-                return
-                renderCollection(xhr.body.collections.map(x => {
-                    let price = ""
-                    return {
-                        id: x.id,
-                        image: x.image.src,
-                    }
-                }))
+                // Rendering Collection.
+                renderCollection(xhr.body.collection)
+
+                // Persisting to Cache.
+                let $key = COLLECTION_STORAGE_KEY + $collection
+                localStorage.setItem($key, JSON.stringify(xhr.body.collection))
             }
         },
         // Handling a fatal error such as a network problem.
@@ -49,32 +45,23 @@ const getCollection = async ($method, $id) => {
 }
 
 // Handle request to render response.
-const renderCollection = rows => {
-    console.log("Render:", rows)
-    $('#collections').html("")
-    if (!rows.length) return
-    rows.forEach(row => {
-        $('#collections').append(`
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 padding-xs">
-                <div class="bg-image" style="background-image: url(${row.image})">
-                    <div class="overlay padding-lg">
-                        <form method="GET" action="products.html">
-                            <input
-                                type="hidden"
-                                name="collection"
-                                value="${row.id}"/>
-                            <button class="padding-sm" type="submit">
-                                {{strings.ViewMore}}
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        `)
-    })
+const renderCollection = collection => {
+    $('#products-collection').css("background-image", `url("${collection.image.src}")`)
+    $('#products-collection h1').html(collection.title)
+    $('#products-collection').show()
 }
 
 $(document).ready(() => {
-    if ($collection)
+    $('#products-collection').hide()
+    if ($collection) {
+        // Loading from backend.
         getCollection("get", $collection)
+
+        // Restoring from Cache.
+        let $key = COLLECTION_STORAGE_KEY + $collection
+        let $data = localStorage.getItem($key)
+        if ($data) {
+            renderCollection(JSON.parse($data))
+        }
+    }
 })

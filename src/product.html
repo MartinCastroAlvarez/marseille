@@ -1,0 +1,9 @@
+{% extends 'html/root.layout.html' %}
+
+{% block main %}
+    <h3 id="product-error" class="center padding-lg">{{strings.CatalogError}}</h3>
+    <h3 id="product-loading" class="center padding-lg">{{strings.Loading}}</h3>
+    <div id="product" class="padding-lg center"></div>
+
+    {% include 'html/shipping.layout.html' %}
+{% endblock %}

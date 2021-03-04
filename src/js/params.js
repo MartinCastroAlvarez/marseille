@@ -12,5 +12,6 @@ const $title = unescape(PARAMS.title || "")
     .replace(/\+/g, " ") || "{{strings.Catalog}}"
 const $search = unescape(PARAMS.search || "").replace(/\+/g, " ")
 const $collection = PARAMS.collection || ""
+const $product = PARAMS.product_id || ""
 const $type = PARAMS.type || ""
 const $id = PARAMS.id || ""

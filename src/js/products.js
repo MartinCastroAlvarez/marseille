@@ -3,8 +3,6 @@ let $isProductsLoading = false
 
 // Handle GET request to the backend.
 const getProducts = async ($method, $payload) => {
-    console.log("Method:", $method)
-    console.log("Payload:", $payload)
     // Start being busy.
     if ($isProductsLoading) return
     $('#catalog-loading').show()
@@ -25,8 +23,8 @@ const getProducts = async ($method, $payload) => {
         // Handle successful requests.
         // Errors might still return a 200 OK.
         success: (xhr, textStatus) => {
-            console.log("Response:", xhr, textStatus)
             if (xhr.head.error) {
+                console.error("Error:", xhr, xhr.head)
                 $("#catalog-error").show()
             } else {
                 renderProducts(xhr.body.products.map(x => {
@@ -59,7 +57,6 @@ const getProducts = async ($method, $payload) => {
 
 // Handle request to render response.
 const renderProducts = rows => {
-    console.log("Render:", rows)
     $('#catalog-products').html("")
     if (!rows.length) {
         $("#catalog-empty").show()
@@ -76,7 +73,7 @@ const renderProducts = rows => {
                     <br/>
                     <h3>${row.price}</h3>
                     <br/>
-                    <form target="product.html" method="GET">
+                    <form action="product.html" target="${row.id}" method="GET">
                         <input type="hidden" name="product_id" value="${row.id}"/>
                         <button class="padding-sm">{{strings.View}}</button>
                     </form>
@@ -97,7 +94,7 @@ $(document).ready(() => {
     // Sending request to backend.
     getProducts("get", {
         search: $search,
-        collection: $collection,
+        collection_id: $collection,
         product_type: $type,
         limit: PARAMS.limit || 30,
         since_id: PARAMS.since_id || "",

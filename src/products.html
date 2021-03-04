@@ -1,9 +1,14 @@
 {% extends 'html/root.layout.html' %}
 
 {% block main %}
-    <div class="products-collection"></div>
+    {# Collection Header #}
+    <div id="products-collection">
+        <div class="overlay center padding-lg">
+            <h1></h1>
+        </div>
+    </div>
+    {# End of Collection Header #}
+
     {% include 'html/search.layout.html' %}
-    {% include 'html/debug.layout.html' %}
     {% include 'html/catalog.layout.html' %}
-    {% include 'html/categories.layout.html' %}
 {% endblock %}

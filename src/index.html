@@ -4,6 +4,8 @@
     {% include 'html/slider.layout.html' %}
     {# include 'html/search.layout.html' #}
     {% include 'html/catalog.layout.html' %}
+
+    {# View More Products #}
     <div class="center padding-sm">
         <form method="GET" action="products.html">
             <button class="padding-sm" type="submit">
@@ -11,7 +13,12 @@
             </button>
         </form>
     </div>
-    {% include 'html/collections.layout.html' %}
+    {# End of View More Products #}
+
     {% include 'html/shipping.layout.html' %}
-    {% include 'html/categories.layout.html' %}
+
+    {# Collections #}
+    <div id="collections" class="collections center padding-lg row"></div>
+    {# End of Collections #}
+
 {% endblock %}

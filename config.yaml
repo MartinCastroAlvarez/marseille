@@ -414,6 +414,34 @@ Strings:
     en: "Nothing Found Here"
     es: "No Hay Resultados"
     fr: "Lorem Ipsum Dolor Sit Amet..."
+  DressesJumpsuits:
+    en: "Dresses & Jumpsuits"
+    es: "Vestidos"
+    fr: "Lorem Ipsum Dolor Sit Amet..."
+  JacketsPuffers:
+    en: "Jackets & Puffers"
+    es: "Chaquetas"
+    fr: "Lorem Ipsum Dolor Sit Amet..."
+  ShirtsTops:
+    en: "Shirts & Tops"
+    es: "Remeras y Tops"
+    fr: "Lorem Ipsum Dolor Sit Amet..."
+  SweatShirt:
+    en: "Sweat Shirt"
+    es: "Remeras"
+    fr: "Lorem Ipsum Dolor Sit Amet..."
+  TShirts:
+    en: "T-Shirts"
+    es: "Camisas"
+    fr: "Lorem Ipsum Dolor Sit Amet..."
+  Buy:
+    en: "Buy"
+    es: "Comprar"
+    fr: "Ipsum"
+  WIP:
+    en: "Word In Progress"
+    es: "En Construcción"
+    fr: "Lorem Ipsum Dolor"
 
 # --------------------------------------------
 # Slider Configuration 

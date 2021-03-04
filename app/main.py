@@ -68,11 +68,11 @@ def product(event: dict, context: object) -> dict:
     """
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
     try:
+        request: Request = Request(event)
         if not request.product_id:
             raise KeyError("Missing Product ID")
-        request: Request = Request(event)
         url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
-                   f".myshopify.com/admin/api/2021-01/products/{request.product_id}/.json"
+                   f".myshopify.com/admin/api/2021-01/products/{request.product_id}.json"
         response: Response = Response()
         r: requests.Response = requests.get(url)
         if r.status_code != 200:
@@ -105,9 +105,9 @@ def collection(event: dict, context: object) -> dict:
     """
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
     try:
+        request: Request = Request(event)
         if not request.collection_id:
             raise KeyError("Missing Collection ID")
-        request: Request = Request(event)
         url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
                    f".myshopify.com/admin/api/2021-01/collections/{request.collection_id}.json"
         response: Response = Response()
@@ -115,7 +115,7 @@ def collection(event: dict, context: object) -> dict:
         if r.status_code != 200:
             raise RuntimeError("Failed to connect with Shopify:", r.status_code, r.text)
         response.body = {
-            constants.COLLECTION: r.json()['product']
+            constants.COLLECTION: r.json()['collection']
         }
         logger.info("Response | sf_response=%s", response)
         return response.to_json()

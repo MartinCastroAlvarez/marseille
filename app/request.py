@@ -64,7 +64,7 @@ class Request:
         """
         Path Arguments Property.
         """
-        return json.loads(self.request.get(self.PATH_PARAMETERS, "{}") or "{}")
+        return self.request.get(self.PATH_PARAMETERS) or {}
 
     @property
     def params(self) -> dict:

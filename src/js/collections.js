@@ -1,14 +1,14 @@
+// Local Store Cache.
+const COLLECTIONS_STORAGE_KEY = "klook-collections"
+
 // Handle the Form state with this flag.
 let $isCollectionsLoading = false
 
 // Handle GET request to the backend.
 const getCollections = async ($method, $payload) => {
-    console.log("Method:", $method)
-    console.log("Payload :", $payload)
     // Start being busy.
     if ($isCollectionsLoading) return
     $isCollectionsLoading = true
-    // Hide errors.
     // Send request to the API.
     return $.ajax({
         type: $method,
@@ -23,17 +23,15 @@ const getCollections = async ($method, $payload) => {
         // Handle successful requests.
         // Errors might still return a 200 OK.
         success: (xhr, textStatus) => {
-            console.log("Response:", xhr, textStatus)
             if (xhr.head.error) {
-                // pass
+                console.error("Error:", xhr, xhr.head)
             } else {
-                renderCollections(xhr.body.collections.map(x => {
-                    let price = ""
-                    return {
-                        id: x.id,
-                        image: x.image.src,
-                    }
-                }))
+                // Rendering Collections.
+                renderCollections(xhr.body.collections)
+
+                // Persisting to Cache.
+                localStorage.setItem(COLLECTIONS_STORAGE_KEY,
+                                     JSON.stringify(xhr.body.collections))
             }
         },
         // Handling a fatal error such as a network problem.
@@ -49,15 +47,17 @@ const getCollections = async ($method, $payload) => {
 
 // Handle request to render response.
 const renderCollections = rows => {
-    console.log("Render:", rows)
     $('#collections').html("")
     if (!rows.length) return
     rows.forEach(row => {
         $('#collections').append(`
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 padding-xs">
-                <div class="bg-image" style="background-image: url(${row.image})">
+                <div
+                    class="bg-image center"
+                    style="background-image: url(${row.image.src})">
                     <div class="overlay padding-lg">
-                        <form method="GET" action="products.html">
+                        <h2>${getString(row.title)}</h2>
+                        <form method="GET" target="${row.id}" action="products.html">
                             <input
                                 type="hidden"
                                 name="collection"
@@ -74,10 +74,15 @@ const renderCollections = rows => {
 }
 
 $(document).ready(() => {
-
     // Loading collections...
     $("#collections").html("")
 
     // Sending request to backend.
     getCollections("get", {})
+
+    // Restoring from Cache.
+    let $data = localStorage.getItem(COLLECTIONS_STORAGE_KEY)
+    if ($data) {
+        renderCollections(JSON.parse($data))
+    }
 })
