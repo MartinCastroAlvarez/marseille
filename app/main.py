@@ -30,7 +30,9 @@ def products(event: dict, context: object) -> dict:
         params: dict = {
             "limit": request.limit,
             "since_id": request.since_id,
+            "collection_id": request.collection,
             "title": request.search,
+            "published_status": "published",
             "status": "active",
         }
         r: requests.Response = requests.get(url, params=params)

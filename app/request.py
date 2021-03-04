@@ -74,6 +74,13 @@ class Request:
         return self.body.get(constants.SINCE_ID, '')
 
     @property
+    def collection(self) -> str:
+        """
+        Collection Property.
+        """
+        return self.body.get(constants.COLLECTION, '')
+
+    @property
     def limit(self) -> int:
         """
         Limit Property.

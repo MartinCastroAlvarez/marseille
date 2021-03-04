@@ -1,0 +1,32 @@
+<form class="search center row padding-lg" method="GET" action="products.html">
+    <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 padding-sm">
+        <div id="search-h1"></div>
+        <input type="hidden" id="search-title" name="title"/>
+        <input type="hidden" id="search-collection" name="collection"/>
+        <input
+            class="padding-sm"
+            type="text"
+            name="search"
+            value=""
+            placeholder="{{strings.SearchPlaceholder}}"/>
+        <br/>
+        <button 
+            class="padding-sm"
+            type="submit">
+            <i class="fa fa-search"></i>
+            {{strings.Search}}
+        </button>
+    </div>
+    <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2"></div>
+</form>
+<script>
+    document.getElementById("search-collection").value = PARAMS.collection || "";
+    const title = unescape(PARAMS.title || "{{strings.Catalog}}").replace(/\+/g," ")
+    document.getElementById("search-title").value = title
+    document.getElementById("search-h1").innerHTML = `
+        <h1>${title}</h1>
+        <br/>
+        <br/>
+    `
+</script>

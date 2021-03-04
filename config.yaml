@@ -41,9 +41,9 @@ Style:
   Black: "#282828"
   LightGray: "#95A5A6"
   DarkGray: "#7f8C8D"
-  Primary: "#3498DB"
-  Secondary: "#2980B9"
-  Tertiary: "#9B59B6"
+  Primary: "#33d9b2"
+  Secondary: "#34ace0"
+  Tertiary: "#218c74"
 
 # --------------------------------------------
 # Assets Configuration
@@ -374,6 +374,18 @@ Strings:
   ViewMore:
     en: "View More"
     es: "Ver Mas"
+    fr: "Lorem Ipsum"
+  SearchPlaceholder:
+    en: "What are you looking for?"
+    es: "Qué estás buscando?"
+    fr: "Lorem Ipsum"
+  Search:
+    en: "Search"
+    es: "Buscar"
+    fr: "Lorem Ipsum"
+  Catalog:
+    en: "Catalog"
+    es: "Catálogo"
     fr: "Lorem Ipsum"
 
 # --------------------------------------------

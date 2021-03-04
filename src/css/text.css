@@ -1,5 +1,6 @@
 /* H1 Title Style */
 h1 {
+    text-transform: uppercase;
     font-family: "Lalezar", "Poppins", sans-serif;
     user-select: none;
     color: {{style.Black}};
@@ -11,6 +12,7 @@ h1 {
 
 /* H2 Title Style */
 h2 {
+    text-transform: uppercase;
     font-family: "Lalezar", "Poppins", sans-serif;
     user-select: none;
     color: {{style.Black}};
@@ -22,6 +24,7 @@ h2 {
 
 /* H3 Title Style */
 h3 {
+    text-transform: uppercase;
     font-family: "Lalezar", "Poppins", sans-serif;
     user-select: none;
     color: {{style.Black}};
@@ -33,6 +36,7 @@ h3 {
 
 /* H4 Title Style */
 h4 {
+    text-transform: uppercase;
     color: {{style.Black}};
     user-select: none;
     padding: 0;
@@ -43,6 +47,7 @@ h4 {
 
 /* H5 Title Style */
 h5 {
+    text-transform: uppercase;
     color: {{style.Black}};
     user-select: none;
     padding: 0;
@@ -53,6 +58,7 @@ h5 {
 
 /* H6 Title Style */
 h6 {
+    text-transform: uppercase;
     color: {{style.Black}};
     user-select: none;
     padding: 0;
@@ -74,6 +80,7 @@ a:link, a:visited, a:active {
     color: {{style.Primary}};
     text-decoration: none;
     cursor: pointer;
+    transition-duration: 0.2s;
 }
 a:hover {
     user-select: text;

@@ -1,0 +1,39 @@
+/* Input Style */
+input {
+    font-family: "Poppins", sans-serif;
+    color: {{style.Black}};
+    background: {{style.White}};
+    border: 2px solid {{style.Primary}};
+    outline: none;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    user-select: none;
+    padding: 0;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+input:hover, input:active, input:focus {
+    border: 2px solid {{style.Secondary}};
+}
+
+/* Button Style */
+button {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    background: {{style.Primary}};
+    border: 2px solid {{style.Primary}};
+    color: {{style.White}};
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+    outline: none;
+}
+button:hover {
+    border: 2px solid {{style.Primary}};
+    background: {{style.White}};
+    color: {{style.Primary}};
+}
