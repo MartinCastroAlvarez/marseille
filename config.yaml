@@ -598,24 +598,3 @@ Categories:
             Type: "HATS-CAP"
           Handkerchiefs:
             Type: "HANDKERCHIEF"
-
-# --------------------------------------------
-# Collections Configuration
-# --------------------------------------------
-Collections:
-  Default: "217567887516"
-  Knitwear:
-    Image: "collections/1.png"
-    Filter: 220475916444
-  Blazers:
-    Image: "collections/2.png"
-    Filter: 
-  Accessories:
-    Image: "collections/3.png"
-    Filter: 220477227164
-  Dresses:
-    Image: "collections/1.png"
-    Filter: 220474343580
-  ShirtsTops:
-    Image: "collections/2.png"
-    Filter: 220474540188

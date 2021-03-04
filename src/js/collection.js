@@ -1,13 +1,13 @@
 // Handle the Form state with this flag.
-let $isCollectionsLoading = false
+let $isCollectionLoading = false
 
 // Handle GET request to the backend.
-const getCollections = async ($method, $payload) => {
+const getCollection = async ($method, $id) => {
     console.log("Method:", $method)
-    console.log("Payload :", $payload)
+    console.log("ID:", $id)
     // Start being busy.
-    if ($isCollectionsLoading) return
-    $isCollectionsLoading = true
+    if ($isCollectionLoading) return
+    $isCollectionLoading = true
     // Hide errors.
     // Send request to the API.
     return $.ajax({
@@ -18,8 +18,7 @@ const getCollections = async ($method, $payload) => {
         headers: {
             "x-api-key": "{{API_KEY}}",
         },
-        url: "{{API_URL}}/v1/collections",
-        data: $payload,
+        url: `{{API_URL}}/v1/collections/${$id}`,
         // Handle successful requests.
         // Errors might still return a 200 OK.
         success: (xhr, textStatus) => {
@@ -27,7 +26,9 @@ const getCollections = async ($method, $payload) => {
             if (xhr.head.error) {
                 // pass
             } else {
-                renderCollections(xhr.body.collections.map(x => {
+                alert(xhr.body.collection)
+                return
+                renderCollection(xhr.body.collections.map(x => {
                     let price = ""
                     return {
                         id: x.id,
@@ -42,13 +43,13 @@ const getCollections = async ($method, $payload) => {
         },
         // Handling the rend of all requests.
         complete: () => {
-            $isCollectionsLoading = false
+            $isCollectionLoading = false
         }
     })
 }
 
 // Handle request to render response.
-const renderCollections = rows => {
+const renderCollection = rows => {
     console.log("Render:", rows)
     $('#collections').html("")
     if (!rows.length) return
@@ -74,10 +75,6 @@ const renderCollections = rows => {
 }
 
 $(document).ready(() => {
-
-    // Loading collections...
-    $("#collections").html("")
-
-    // Sending request to backend.
-    getCollections("get", {})
+    if ($collection)
+        getCollection("get", $collection)
 })

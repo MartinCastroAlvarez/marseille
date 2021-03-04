@@ -88,11 +88,6 @@ const renderProducts = rows => {
 
 $(document).ready(() => {
 
-    // Updating HTML.
-    $("#catalog-title").html(`
-        <h1>${$title}</h1>
-    `)
-
     // Loading products...
     $("#catalog-error").hide()
     $("#catalog-empty").hide()

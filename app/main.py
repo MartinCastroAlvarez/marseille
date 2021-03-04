@@ -24,7 +24,7 @@ def products(event: dict, context: object) -> dict:
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
     try:
         url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
-                    ".myshopify.com/admin/api/2021-01/products.json"
+                   f".myshopify.com/admin/api/2021-01/products.json"
         request: Request = Request(event)
         response: Response = Response()
         params: dict = {
@@ -68,9 +68,11 @@ def product(event: dict, context: object) -> dict:
     """
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
     try:
+        if not request.product_id:
+            raise KeyError("Missing Product ID")
         request: Request = Request(event)
         url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
-                   ".myshopify.com/admin/api/2021-01/products/{request.product_id}/.json"
+                   f".myshopify.com/admin/api/2021-01/products/{request.product_id}/.json"
         response: Response = Response()
         r: requests.Response = requests.get(url)
         if r.status_code != 200:
@@ -103,9 +105,11 @@ def collection(event: dict, context: object) -> dict:
     """
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
     try:
+        if not request.collection_id:
+            raise KeyError("Missing Collection ID")
         request: Request = Request(event)
         url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
-                   ".myshopify.com/admin/api/2021-01/collections/{request.collection_id}/.json"
+                   f".myshopify.com/admin/api/2021-01/collections/{request.collection_id}.json"
         response: Response = Response()
         r: requests.Response = requests.get(url)
         if r.status_code != 200:
@@ -136,11 +140,12 @@ def collections(event: dict, context: object) -> dict:
     Lambda Collections Search Handler.
     https://shopify.dev/docs/admin-api/rest/reference/products/collection
     https://shopify.dev/docs/admin-api/rest/reference/products/customcollection#index-2021-01
+    https://shopify.dev/docs/admin-api/rest/reference/products/smartcollection
     """
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
     try:
         url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
-                    ".myshopify.com/admin/api/2021-01/custom_collections.json"
+                   f".myshopify.com/admin/api/2021-01/smart_collections.json"
         request: Request = Request(event)
         response: Response = Response()
         params: dict = {
@@ -150,7 +155,7 @@ def collections(event: dict, context: object) -> dict:
         if r.status_code != 200:
             raise RuntimeError("Failed to connect with Shopify:", r.status_code, r.text)
         response.body = {
-            constants.COLLECTIONS: r.json()['custom_collections'],
+            constants.COLLECTIONS: r.json()['smart_collections'],
             constants.DEBUG: params,
         }
         logger.info("Response | sf_response=%s", response)
