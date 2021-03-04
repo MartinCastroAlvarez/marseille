@@ -81,6 +81,20 @@ class Request:
         return self.body.get(constants.COLLECTION, '')
 
     @property
+    def product_type(self) -> str:
+        """
+        Product Type Property.
+        """
+        return self.body.get(constants.PRODUCT_TYPE, '')
+
+    @property
+    def product_id(self) -> str:
+        """
+        Product ID Property.
+        """
+        return self.body.get(constants.PRODUCT, '')
+
+    @property
     def limit(self) -> int:
         """
         Limit Property.

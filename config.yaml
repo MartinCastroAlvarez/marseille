@@ -17,12 +17,15 @@ Language:
   English:
     Code: "en"
     Title: "English"
+    Currency: "$"
   Spanish:
     Code: "es"
     Title: "Spanish"
+    Currency: "€"
   French:
     Code: "fr"
     Title: "French"
+    Currency: "€"
 
 # --------------------------------------------
 # Build Configuration
@@ -37,9 +40,9 @@ Build:
 # --------------------------------------------
 Style:
   White: "#F5F8FA"
-  Silver: "#BDC3C7"
+  Silver: "#DFE4EA"
   Black: "#282828"
-  LightGray: "#95A5A6"
+  LightGray: "#F1F2F6"
   DarkGray: "#7f8C8D"
   Primary: "#33d9b2"
   Secondary: "#34ace0"
@@ -578,6 +581,7 @@ Categories:
 # Collections Configuration
 # --------------------------------------------
 Collections:
+  Default: "217567887516"
   FirstCollection:
     Image: "collections/1.png"
     Filter: "collection-1"

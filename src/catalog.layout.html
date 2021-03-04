@@ -1,30 +1,7 @@
-<div class="catalog center row padding-sm">
+<div class="catalog center row padding-lg">
+    <div id="search-h1"></div>
     <h3 id="catalog-error">{{strings.CatalogError}}</h3>
     <h3 id="catalog-loading">{{strings.Loading}}</h3>
     <div class="row" id="catalog-products"></div>
-    {# 
-    {% for id, collection in collections.items()%}
-        <div
-            {% if loop.index == 1 %}
-                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-xs"
-            {% else %}
-                class="col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-xs"
-            {% endif %}>
-            <div style="background-image: url(assets/{{collection.Image}})">
-                <div class="overlay padding-lg">
-                    <h2>{{strings[id]}}</h2>
-                    <p>
-                        <form method="GET" action="products.html">
-                            <input type="hidden" name="collection" value="{{collection.Filter}}"/>
-                            <input type="hidden" name="title" value="{{strings[id]}}"/>
-                            <button class="padding-sm" type="submit">
-                                {{strings.ViewMore}}
-                            </button>
-                        </form>
-                    </p>
-                </div>
-            </div>
-        </div>
-    {% endfor %}
-    #}
+    <br/>
 </div>

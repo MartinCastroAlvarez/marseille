@@ -1,9 +1,8 @@
 // Handle the Form state with this flag.
 let $isLoading = false
 
-// Handle post request to the backend
+// Handle GET request to the backend.
 const request = async ($method, $payload) => {
-    return // FIXME
     console.log("Method:", $method)
     console.log("Payload:", $payload)
     // Start being busy.
@@ -22,7 +21,7 @@ const request = async ($method, $payload) => {
             "x-api-key": "{{API_KEY}}",
         },
         url: "{{API_URL}}/v1/products",
-        data: JSON.stringify($payload),
+        data: $payload,
         // Handle successful requests.
         // Errors might still return a 200 OK.
         success: (xhr, textStatus) => {
@@ -30,15 +29,19 @@ const request = async ($method, $payload) => {
             if (xhr.head.error) {
                 $("#catalog-error").show()
             } else {
-                alert(1)
-                /*
-                    render([{
-                        id: "111",
-                        name: "Lorem Ipsum",
-                        price: "$30.00",
-                        image: "assets/product/1.jpg",
-                    }])
-                */
+                render(xhr.body.products.map(x => {
+                    let price = ""
+                    if (x.variants.length) {
+                        const minPrice = Math.max.apply(Math, x.variants.map(y => y.price))
+                        price = "{{CURRENCY}}" + minPrice
+                    }
+                    return {
+                        id: x.id,
+                        name: x.title,
+                        price: price,
+                        image: x.image.src,
+                    }
+                }))
             }
         },
         // Handling a fatal error such as a network problem.
@@ -65,8 +68,10 @@ const render = rows => {
                     style="background-image: url('${row.image}')">
                 </div>
                 <div class="catalog-content padding-sm">
-                    <h2>${row.name}</h2>
+                    <p class="nowrap">${row.name}</p>
+                    <br/>
                     <h3>${row.price}</h3>
+                    <br/>
                     <form target="product.html" method="GET">
                         <input type="hidden" name="product_id" value="${row.id}"/>
                         <button class="padding-sm">{{strings.View}}</button>
@@ -81,12 +86,11 @@ $(document).ready(() => {
     $("#catalog-error").hide()
     $("#catalog-loading").hide()
     $("#catalog-products").html("")
-    request("post", {
+    request("get", {
         search: unescape(PARAMS.search || "").replace(/\+/g," "),
-        collection: "{{LANGUAGE}}-" + unescape(PARAMS\
-            .collection || "all").replace(/\+/g," "),
+        // collection: PARAMS.collection || {{collections.Default}},
+        collection: 123123,
         limit: PARAMS.limit || 30,
         since_id: PARAMS.since_id || "",
     })
-
 })

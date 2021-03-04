@@ -1,25 +1,27 @@
 <div class="collections row padding-lg">
     {% for id, collection in collections.items()%}
-        <div
-            {% if loop.index == 1 %}
-                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-xs"
-            {% else %}
-                class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding-xs"
-            {% endif %}>
-            <div class="bg-image" style="background-image: url(assets/{{collection.Image}})">
-                <div class="overlay padding-lg">
-                    <h2>{{strings[id]}}</h2>
-                    <p>
-                        <form method="GET" action="products.html">
-                            <input type="hidden" name="collection" value="{{collection.Filter}}"/>
-                            <input type="hidden" name="title" value="{{strings[id]}}"/>
-                            <button class="padding-sm" type="submit">
-                                {{strings.ViewMore}}
-                            </button>
-                        </form>
-                    </p>
+        {% if collection.Image %}
+            <div
+                {% if loop.index == 1 %}
+                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-xs"
+                {% else %}
+                    class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding-xs"
+                {% endif %}>
+                <div class="bg-image" style="background-image: url(assets/{{collection.Image}})">
+                    <div class="overlay padding-lg">
+                        <h2>{{strings[id]}}</h2>
+                        <p>
+                            <form method="GET" action="products.html">
+                                <input type="hidden" name="collection" value="{{collection.Filter}}"/>
+                                <input type="hidden" name="title" value="{{strings[id]}}"/>
+                                <button class="padding-sm" type="submit">
+                                    {{strings.ViewMore}}
+                                </button>
+                            </form>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endif %}
     {% endfor %}
 </div>

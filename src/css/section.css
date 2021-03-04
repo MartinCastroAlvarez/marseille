@@ -125,7 +125,7 @@ footer a { color: {{style.White}}; }
     background: {{style.White}};
     background-position: center;
     text-align: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     padding: 0px;
 }
