@@ -29,6 +29,7 @@ footer a { color: {{style.White}}; }
 /* Header Style */
 .header {
     background: {{style.White}};
+    user-select: none;
     margin: 0px!important;
     display: flex;
     width: 100%;
@@ -39,6 +40,7 @@ footer a { color: {{style.White}}; }
 }
 .header > div {
     padding: 0px;
+    user-select: none;
     margin: 0px;
     display: flex;
     justify-content: space-around;
