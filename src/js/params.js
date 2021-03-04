@@ -6,3 +6,10 @@ window.location.search
            (str, key, value) => {
                 PARAMS[key] = value
             })
+
+// Collection URL Params.
+const $title = unescape(PARAMS.title || "{{strings.Catalog}}").replace(/\+/g," ")
+const $search = unescape(PARAMS.search || "").replace(/\+/g," ")
+const $collection = PARAMS.collection || ""
+const $type = PARAMS.type || ""
+const $id = PARAMS.id || ""

@@ -13,6 +13,7 @@ COLLECTIONS: str = "collections"
 ID: str = "id"
 SEARCH: str = "search"
 PRODUCT_TYPE: str = "product_type"
+PRODUCT_ID: str = "product_id"
 
 MAX_SEARCH_SIZE: str = 500
 

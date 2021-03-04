@@ -4,7 +4,6 @@
 <form class="search center row padding-sm" method="GET" action="products.html">
     <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2"></div>
     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 padding-sm">
-        <p><i id="search-collection-debug"></i></p>
         {#
         <input type="hidden" id="search-title" name="title"/>
         <input
@@ -16,7 +15,7 @@
             placeholder="{{strings.SearchPlaceholder}}"/>
         <br/>
         <div class="select-wrapper padding-sm">
-            <select id="search-collection" class="js-example-basic-single" name="collection">
+            <select id="search-type" class="js-example-basic-single" name="collection">
                 {% for id, category in categories.items() %}
                     <optgroup label="{{strings[id]}}">
                     {% for id, subcategory in category.Subcategories.items() %}

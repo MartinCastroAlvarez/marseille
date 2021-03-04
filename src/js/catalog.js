@@ -87,9 +87,9 @@ $(document).ready(() => {
     $("#catalog-loading").hide()
     $("#catalog-products").html("")
     request("get", {
-        search: unescape(PARAMS.search || "").replace(/\+/g," "),
-        // collection: PARAMS.collection || {{collections.Default}},
-        collection: 123123,
+        search: $search,
+        collection: $collection,
+        product_type: $type,
         limit: PARAMS.limit || 30,
         since_id: PARAMS.since_id || "",
     })

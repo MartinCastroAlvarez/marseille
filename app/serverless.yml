@@ -70,6 +70,35 @@ functions:
       MARSEILLE_USER: "${env:MARSEILLE_USER}"
       MARSEILLE_PASS: "${env:MARSEILLE_PASS}"
 
+  # ----------------------------------------------
+  # GET PRODUCT
+  # ----------------------------------------------
+  product:
+    handler: "main.product"
+    events:
+      - http:
+          path: "v1/products/:id"
+          method: "get"
+          private: true
+          cors:
+            origin: '*'
+            headers:
+              - 'Content-Type'
+              - 'X-Amz-Date'
+              - 'Authorization'
+              - 'X-Api-Key'
+              - 'X-Amz-Security-Token'
+              - 'X-Amz-User-Agent'
+            allowCredentials: false
+          response:
+            headers:
+              Access-Control-Allow-Origin: "*"
+              # Access-Control-Allow-Credentials: true
+    environment:
+      MARSEILLE_SHOP: "${env:MARSEILLE_SHOP}"
+      MARSEILLE_USER: "${env:MARSEILLE_USER}"
+      MARSEILLE_PASS: "${env:MARSEILLE_PASS}"
+
 resources:
   Resources:
 

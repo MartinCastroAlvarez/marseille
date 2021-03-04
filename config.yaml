@@ -421,161 +421,160 @@ Link:
 Categories:
   Coats:
     Image: "categories/jackets.jpeg"
-    Filter: "all-coats"
+    Type: "COAT"
     Subcategories:
       JacketsPuffers:
-        Filter: "all-jackets"
         Filters:
           All:
-            Filter: "all-jackets"
+            Type: "COAT"
           Jackets:
-            Filter: "jackets"
+            Type: "JACKET"
           Puffers:
-            Filter: "puffers"
+            Type: "PUFFER"
           Denim:
-            Filter: "denim"
+            Type: "DENIM"
   Blazers:
     Image: "categories/blazers.jpeg"
-    Filter: "all-blazers"
+    Type: "BLAZERS"
     Subcategories:
       DressesMono:
-        Filter: "all-dresses"
+        Type: "DRESS"
         Filters:
           All:
-            Filter: "all-dresses"
+            Type: "DRESS"
           Mini:
-            Filter: "mini-dresses"
+            Type: "MIDI-DRESS"
           Midi:
-            Filter: "midi-dresses"
+            Type: "MIDI-DRESS"
           Maxi:
-            Filter: "maxi-dresses"
+            Type: "MAXI-DRESS"
           JumpSuits:
-            Filter: "jump-suites"
+            Type: "JUMP-SUIT"
       ShirtsTops:
-        Filter: "all-shirts"
+        Type: "SHIRT"
         Filters:
           All:
-            Filter: "all-shirts"
+            Type: "SHIRT"
           Shirts:
-            Filter: "shirts"
+            Type: "SHIRT"
           Blouses:
-            Filter: "blouses"
+            Type: "BLOUSE"
           Tops:
-            Filter: "tops"
+            Type: "TOP"
           CropTops:
-            Filter: "crop-tops"
+            Type: "CROP-TOP"
       TShirts:
-        Filter: "all-t-shirts"
+        Type: "TSHIRT"
         Filters:
           All:
-            Filter: "all-t-shirts"
+            Type: "TSHIRT"
           Basics:
-            Filter: "basic-t-shirts"
+            Type: "BASIC-TSHIRT"
           Printed:
-            Filter: "printed-t-shirts"
+            Type: "PRINTED-TSHIRT"
           Cropped:
-            Filter: "cropped-t-shirts"
+            Type: "CROPPED-TSHIRT"
           LongSleeve:
-            Filter: "long-sleeve-t-shirts"
+            Type: "LONG-SLEEVE-TSHIRT"
           TankTops:
-            Filter: "tank-tops-t-shirts"
+            Type: "TANK-TOPS-TSHIRT"
           ShortSleeve:
-            Filter: "short-sleeve-t-shirts"
+            Type: "SHORT-SLEEVE-TSHIRT"
       Knitwear:
-        Filter: "all-knit-wear"
+        Type: "KNITWEAR"
         Filters:
           All:
-            Filter: "all-knitwear"
+            Type: "KNITWEAR"
           Cardigans:
-            Filter: "cardigans"
+            Type: "CARDIGAN"
           Sweatters:
-            Filter: "sweatters"
+            Type: "SWEATTER"
           KnitTops:
-            Filter: "knit-tops"
+            Type: "KNIT-TOP"
           Dresses:
-            Filter: "knit-dresses"
+            Type: "KNIT-DRESS"
           TurtleNeck:
-            Filter: "turtle-neck"
+            Type: "TURTLE-NECK"
           Basics:
-            Filter: "basic-dresses"
+            Type: "BASIC-DRESS"
       Pantalones:
-        Filter: "all-pantalones"
+        TYPE: "PANTALON"
         Filters:
           All:
-            Filter: "all-pantalones"
+            TYPE: "PANTALON"
           Office:
-            Filter: "office"
+            Type: "OFFICE"
           Legging:
-            Filter: "leggings"
+            Type: "LEGGING"
           Joggers:
-            Filter: "joggers"
+            Type: "JOGGER"
       Jeans:
-        Filter: "all-jeans"
+        Type: "JEAN"
         Filters:
           All:
-            Filter: "all-jeans"
+            Type: "JEAN"
           HighWaist:
-            Filter: "high-waist"
+            Type: "HIGH-WAIST"
           MidWaist:
-            Filter: "mid-waist"
+            Type: "MID-WAIST"
           Slouchy:
-            Filter: "slouchy"
+            Type: "SLOUCHY"
           MomFit:
-            Filter: "mom-fit"
+            Type: "MOM-FIT"
           Baggy:
-            Filter: "baggy"
+            Type: "BAGGY"
           Straight:
-            Filter: "straight"
+            Type: "STRAIGHT"
           Slim:
-            Filter: "slim"
+            Type: "SLIM"
       SkirtsShorts:
-        Filter: "all-skirt-shorts"
+        Type: "SKIRTS-SHORT"
         Filters:
           All:
-            Filter: "all-skirts-shorts"
+            Type: "SKIRTS-SHORT"
           Mini:
-            Filter: "mini-skirts"
+            Type: "MINI-SKIRT"
           Midi:
-            Filter: "midi-skirts"
+            Type: "MIDI-SKIRT"
           Pleated:
-            Filter: "pleated-skirts"
+            Type: "PLEATED-SKIRT"
           Shorts:
-            Filter: "short-skirts"
+            Type: "SHORT-SKIT"
       SweatShirt:
-        Filter: "all-sweat-shirts"
+        Filter: "SWEAT-SHIRT"
         Filters:
           All:
-            Filter: "all-sweat-shirts"
+            Type: "SWEAT-SHIRT"
   Accessories:
-    Filter: "all-accessories"
+    Type: "ACCESSORY"
     Image: "categories/accessories.jpeg"
     Subcategories:
       Bags:
-        Filter: "all-bags"
+        Type: "BAG"
         Filters:
           All:
-            Filter: "all-bags"
+            Type: "BAG"
           CrossBodyBags:
-            Filter: "cross-body-bags"
+            Type: "CROSS-BODY-BAG"
           MidiBags:
-            Filter: "midi-bags"
+            Type: "MIDI-BAG"
           LargeBags:
-            Filter: "large-bags"
+            Type: "LARGE-BAG"
       Accessories:
-        Filter: "all-accessories"
+        Type: "ACCESSORY"
         Filters:
           All:
-            Filter: "all-accessories"
+            Type: "ACCESSORY"
           Jewerly:
-            Filter: "jewerly"
+            Type: "JEWERLY"
           Belts:
-            Filter: "belts"
+            Type: "BELT"
           Sunglasses:
-            Filter: "sunglasses"
+            Type: "SUNGLASS"
           HatsCaps:
-            Filter: "hats-caps"
+            Type: "HATS-CAP"
           Handkerchiefs:
-            Filter: "handkerchiefs"
+            Type: "HANDKERCHIEF"
 
 # --------------------------------------------
 # Collections Configuration

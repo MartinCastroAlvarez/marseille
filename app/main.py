@@ -22,9 +22,9 @@ def products(event: dict, context: object) -> dict:
     https://shopify.dev/docs/admin-api/rest/reference/products/product#index-2021-01
     """
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
-    url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
-               ".myshopify.com/admin/api/2021-01/products.json"
     try:
+        url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
+                    ".myshopify.com/admin/api/2021-01/products.json"
         request: Request = Request(event)
         response: Response = Response()
         params: dict = {
@@ -40,7 +40,8 @@ def products(event: dict, context: object) -> dict:
         if r.status_code != 200:
             raise RuntimeError("Failed to connect with Shopify:", r.status_code, r.text)
         response.body = {
-            constants.PRODUCTS: r.json()['products']
+            constants.PRODUCTS: r.json()['products'],
+            constants.DEBUG: params,
         }
         logger.info("Response | sf_response=%s", response)
         return response.to_json()
@@ -66,10 +67,10 @@ def product(event: dict, context: object) -> dict:
     https://shopify.dev/docs/admin-api/rest/reference/products/product#show-2021-01
     """
     logger.info("Request | sf_event=%s | sf_context=%s", event, context)
-    url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
-               ".myshopify.com/admin/api/2021-01/product/{event.product_id}/.json"
     try:
         request: Request = Request(event)
+        url: str = f"https://{config.USER}:{config.PASS}@{config.SHOP}"\
+                   ".myshopify.com/admin/api/2021-01/product/{request.product_id}/.json"
         response: Response = Response()
         r: requests.Response = requests.get(url)
         if r.status_code != 200:

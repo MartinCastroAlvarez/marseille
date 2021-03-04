@@ -60,46 +60,66 @@ class Request:
         return json.loads(self.request.get(self.BODY, "{}") or "{}")
 
     @property
+    def args(self) -> dict:
+        """
+        Path Arguments Property.
+        """
+        return json.loads(self.request.get(self.PATH_PARAMETERS, "{}") or "{}")
+
+    @property
+    def params(self) -> dict:
+        """
+        Params Property.
+        """
+        return self.request.get(self.QUERY_STRING) or {}
+
+    def get(self, key: str, default: str = "") -> str:
+        """
+        Attribute Getter
+        """
+        return self.args.get(key) or self.params.get(key) or self.body.get(key) or default
+
+    @property
     def page(self) -> int:
         """
         Page Property.
         """
-        return int(self.body.get(constants.PAGE, 0))
+        return int(self.get(constants.PAGE, 0))
 
     @property
     def since_id(self) -> str:
         """
         Offset Property.
         """
-        return self.body.get(constants.SINCE_ID, '')
+        return self.get(constants.SINCE_ID, '')
 
     @property
     def collection(self) -> str:
         """
         Collection Property.
         """
-        return self.body.get(constants.COLLECTION, '')
+        return self.get(constants.COLLECTION, '')
 
     @property
     def product_type(self) -> str:
         """
         Product Type Property.
         """
-        return self.body.get(constants.PRODUCT_TYPE, '')
+        return self.get(constants.PRODUCT_TYPE, '')
 
     @property
     def product_id(self) -> str:
         """
         Product ID Property.
         """
-        return self.body.get(constants.PRODUCT, '')
+        return self.get(constants.PRODUCT_ID, '')
 
     @property
     def limit(self) -> int:
         """
         Limit Property.
         """
-        value = self.body.get(constants.LIMIT)
+        value = self.get(constants.LIMIT)
         return int(value or constants.DEFAULT_LIMIT)
 
     @property
@@ -107,11 +127,11 @@ class Request:
         """
         Search Keyword Property.
         """
-        return self.body.get(constants.SEARCH, "")
+        return self.get(constants.SEARCH, "")
 
     @property
     def debug(self) -> bool:
         """
         Debug Flag Property.
         """
-        return self.body.get(constants.DEBUG, False)
+        return self.get(constants.DEBUG, False)
