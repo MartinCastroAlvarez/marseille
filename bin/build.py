@@ -114,6 +114,7 @@ for language in languages:
         "style": config["Style"],
         "assets": config["Assets"],
         "link": config["Link"],
+        "slider": config["Slider"],
         "language": config["Language"],
         "categories": config["Categories"],
         "collections": config["Collections"],

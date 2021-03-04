@@ -238,10 +238,10 @@ Strings:
     en: "Basics"
     es: "Básicos"
     fr: "Basiques"
-  Pantalones:
-    en: "Pantalones"
+  Pants:
+    en: "Pants"
     es: "Pantalones"
-    fr: "Pantalones"
+    fr: "Lorem Ipsum"
   Office:
     en: "Office"
     es: "Oficina"
@@ -402,6 +402,29 @@ Strings:
     en: "View"
     es: "Ver"
     fr: "Ipsum"
+  Previous:
+    en: "Previous"
+    es: "Anterior"
+    fr: "Ipsum"
+  Next:
+    en: "Next"
+    es: "Siguiente"
+    fr: "Ipsum"
+  EmptyList:
+    en: "Nothing Found Here"
+    es: "No Hay Resultados"
+    fr: "Lorem Ipsum Dolor Sit Amet..."
+
+# --------------------------------------------
+# Slider Configuration 
+# --------------------------------------------
+Slider:
+  FirstCollection:
+    Image: "promo/1.jpg"
+  SecondCollection:
+    Image: "promo/2.jpg"
+  ThirdCollection:
+    Image: "promo/3.jpg"
 
 # --------------------------------------------
 # Links Configuration 
@@ -497,8 +520,8 @@ Categories:
             Type: "TURTLE-NECK"
           Basics:
             Type: "BASIC-DRESS"
-      Pantalones:
-        TYPE: "PANTALON"
+      Pants:
+        TYPE: "PANTS"
         Filters:
           All:
             TYPE: "PANTALON"
@@ -581,12 +604,18 @@ Categories:
 # --------------------------------------------
 Collections:
   Default: "217567887516"
-  FirstCollection:
+  Knitwear:
     Image: "collections/1.png"
-    Filter: "collection-1"
-  SecondCollection:
+    Filter: 220475916444
+  Blazers:
     Image: "collections/2.png"
-    Filter: "collection-2"
-  ThirdCollection:
+    Filter: 
+  Accessories:
     Image: "collections/3.png"
-    Filter: "collection-3"
+    Filter: 220477227164
+  Dresses:
+    Image: "collections/1.png"
+    Filter: 220474343580
+  ShirtsTops:
+    Image: "collections/2.png"
+    Filter: 220474540188

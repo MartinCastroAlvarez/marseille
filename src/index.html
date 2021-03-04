@@ -1,9 +1,9 @@
-{% extends 'root.layout.html' %}
+{% extends 'html/root.layout.html' %}
 
 {% block main %}
-    {% include 'slider.layout.html' %}
-    {# include 'search.layout.html' #}
-    {% include 'catalog.layout.html' %}
+    {% include 'html/slider.layout.html' %}
+    {# include 'html/search.layout.html' #}
+    {% include 'html/catalog.layout.html' %}
     <div class="center padding-sm">
         <form method="GET" action="products.html">
             <button class="padding-sm" type="submit">
@@ -11,7 +11,7 @@
             </button>
         </form>
     </div>
-    {% include 'collections.layout.html' %}
-    {% include 'shipping.layout.html' %}
-    {% include 'categories.layout.html' %}
+    {% include 'html/collections.layout.html' %}
+    {% include 'html/shipping.layout.html' %}
+    {% include 'html/categories.layout.html' %}
 {% endblock %}

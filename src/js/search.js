@@ -10,10 +10,6 @@ $(document).ready(function() {
     $("#search-keyword").val($search)
     $("search-title").val($title)
 
-    // Updating HTML.
-    $("search-h1").html(`
-        <h1>${$search}</h1>
-    `)
-
+    // Select dropdown.
     $('#search-type').select2()
 })

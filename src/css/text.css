@@ -1,7 +1,7 @@
 /* H1 Title Style */
 h1 {
     text-transform: uppercase;
-    font-family: "Lalezar", "Poppins", sans-serif;
+    font-family: "Cinzel", "Lalezar", "Poppins", sans-serif;
     user-select: none;
     color: {{style.Black}};
     padding: 0;
@@ -13,7 +13,7 @@ h1 {
 /* H2 Title Style */
 h2 {
     text-transform: uppercase;
-    font-family: "Lalezar", "Poppins", sans-serif;
+    font-family: "Cinzel", "Lalezar", "Poppins", sans-serif;
     user-select: none;
     color: {{style.Black}};
     padding: 0;
@@ -25,7 +25,7 @@ h2 {
 /* H3 Title Style */
 h3 {
     text-transform: uppercase;
-    font-family: "Lalezar", "Poppins", sans-serif;
+    font-family: "Cinzel", "Lalezar", "Poppins", sans-serif;
     user-select: none;
     color: {{style.Black}};
     padding: 0;
@@ -36,6 +36,7 @@ h3 {
 
 /* H4 Title Style */
 h4 {
+    font-family: "Cinzel", "Lalezar", "Poppins", sans-serif;
     text-transform: uppercase;
     color: {{style.Black}};
     user-select: none;
@@ -47,6 +48,7 @@ h4 {
 
 /* H5 Title Style */
 h5 {
+    font-family: "Cinzel", "Lalezar", "Poppins", sans-serif;
     text-transform: uppercase;
     color: {{style.Black}};
     user-select: none;
@@ -58,6 +60,7 @@ h5 {
 
 /* H6 Title Style */
 h6 {
+    font-family: "Cinzel", "Lalezar", "Poppins", sans-serif;
     text-transform: uppercase;
     color: {{style.Black}};
     user-select: none;
@@ -69,6 +72,7 @@ h6 {
 
 /* Paragraph Style */
 p {
+    font-family: "Poppins", sans-serif;
     color: {{style.Black}};
     user-select: none;
     padding: 0;

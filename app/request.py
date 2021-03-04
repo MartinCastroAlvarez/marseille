@@ -94,11 +94,11 @@ class Request:
         return self.get(constants.SINCE_ID, '')
 
     @property
-    def collection(self) -> str:
+    def collection_id(self) -> str:
         """
         Collection Property.
         """
-        return self.get(constants.COLLECTION, '')
+        return self.get(constants.COLLECTION_ID, '')
 
     @property
     def product_type(self) -> str:

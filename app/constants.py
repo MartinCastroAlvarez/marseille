@@ -6,14 +6,15 @@ APP_VERSION: str = "marseille"
 
 PRODUCT: str = "product"
 PRODUCTS: str = "products"
+PRODUCT_ID: str = "product_id"
+PRODUCT_TYPE: str = "product_type"
 
 COLLECTION: str = "collection"
 COLLECTIONS: str = "collections"
+COLLECTION_ID: str = "collection_id"
 
 ID: str = "id"
 SEARCH: str = "search"
-PRODUCT_TYPE: str = "product_type"
-PRODUCT_ID: str = "product_id"
 
 MAX_SEARCH_SIZE: str = 500
 

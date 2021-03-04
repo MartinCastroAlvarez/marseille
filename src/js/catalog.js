@@ -1,14 +1,14 @@
 // Handle the Form state with this flag.
-let $isLoading = false
+let $isProductsLoading = false
 
 // Handle GET request to the backend.
-const request = async ($method, $payload) => {
+const getProducts = async ($method, $payload) => {
     console.log("Method:", $method)
     console.log("Payload:", $payload)
     // Start being busy.
-    if ($isLoading) return
+    if ($isProductsLoading) return
     $('#catalog-loading').show()
-    $isLoading = true
+    $isProductsLoading = true
     // Hide errors.
     $("#catalog-error").hide()
     // Send request to the API.
@@ -29,7 +29,7 @@ const request = async ($method, $payload) => {
             if (xhr.head.error) {
                 $("#catalog-error").show()
             } else {
-                render(xhr.body.products.map(x => {
+                renderProducts(xhr.body.products.map(x => {
                     let price = ""
                     if (x.variants.length) {
                         const minPrice = Math.max.apply(Math, x.variants.map(y => y.price))
@@ -52,15 +52,19 @@ const request = async ($method, $payload) => {
         // Handling the rend of all requests.
         complete: () => {
             $("#catalog-loading").hide()
-            $isLoading = false
+            $isProductsLoading = false
         }
     })
 }
 
 // Handle request to render response.
-const render = rows => {
+const renderProducts = rows => {
     console.log("Render:", rows)
     $('#catalog-products').html("")
+    if (!rows.length) {
+        $("#catalog-empty").show()
+        return
+    }
     rows.forEach(row => {
         $('#catalog-products').append(`
             <div class="col-xs-6 col-sm-4 col-md-3 col-lg-4 padding-sm catalog-product">
@@ -83,10 +87,20 @@ const render = rows => {
 }
 
 $(document).ready(() => {
+
+    // Updating HTML.
+    $("#catalog-title").html(`
+        <h1>${$title}</h1>
+    `)
+
+    // Loading products...
     $("#catalog-error").hide()
+    $("#catalog-empty").hide()
     $("#catalog-loading").hide()
     $("#catalog-products").html("")
-    request("get", {
+
+    // Sending request to backend.
+    getProducts("get", {
         search: $search,
         collection: $collection,
         product_type: $type,

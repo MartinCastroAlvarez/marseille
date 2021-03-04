@@ -8,8 +8,9 @@ window.location.search
             })
 
 // Collection URL Params.
-const $title = unescape(PARAMS.title || "{{strings.Catalog}}").replace(/\+/g," ")
-const $search = unescape(PARAMS.search || "").replace(/\+/g," ")
+const $title = unescape(PARAMS.title || "")
+    .replace(/\+/g, " ") || "{{strings.Catalog}}"
+const $search = unescape(PARAMS.search || "").replace(/\+/g, " ")
 const $collection = PARAMS.collection || ""
 const $type = PARAMS.type || ""
 const $id = PARAMS.id || ""

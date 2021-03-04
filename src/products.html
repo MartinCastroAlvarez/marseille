@@ -1,8 +1,9 @@
-{% extends 'root.layout.html' %}
+{% extends 'html/root.layout.html' %}
 
 {% block main %}
-    {% include 'search.layout.html' %}
-    {% include 'catalog.layout.html' %}
-    {% include 'debug.layout.html' %}
-    {% include 'categories.layout.html' %}
+    {% include 'html/search.layout.html' %}
+    <div class="padding-sm center" id="catalog-title"></div>
+    {% include 'html/debug.layout.html' %}
+    {% include 'html/catalog.layout.html' %}
+    {% include 'html/categories.layout.html' %}
 {% endblock %}
