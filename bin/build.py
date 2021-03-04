@@ -116,7 +116,6 @@ for language in languages:
         "link": config["Link"],
         "slider": config["Slider"],
         "language": config["Language"],
-        "categories": config["Categories"],
         "strings": {
             k: v[language.get("Code", "en")]
             for k, v in config["Strings"].items()
