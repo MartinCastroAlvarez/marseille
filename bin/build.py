@@ -105,6 +105,9 @@ for language in languages:
     # APPLICATION CONTEXT
     # Loading variables that are available to all templates.
     context: dict = {
+        "LANGUAGE": language,
+        "API_KEY": secrets['key'],
+        "API_URL": secrets['url'],
         "application": config["Application"],
         "url": secrets["url"],
         "style": config["Style"],

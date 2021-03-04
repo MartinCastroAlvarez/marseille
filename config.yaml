@@ -387,6 +387,18 @@ Strings:
     en: "Catalog"
     es: "Catálogo"
     fr: "Lorem Ipsum"
+  CatalogError:
+    en: "The catalog can't be rendered at this moment"
+    es: "El catálogo no se puede mostrar en este momento"
+    fr: "Lorem Ipsum Dolor Sit Amet"
+  Loading:
+    en: "Loading..."
+    es: "Cargando..."
+    fr: "Lorem Ipsum"
+  View:
+    en: "View"
+    es: "Ver"
+    fr: "Ipsum"
 
 # --------------------------------------------
 # Links Configuration 

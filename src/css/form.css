@@ -37,3 +37,47 @@ button:hover {
     background: {{style.White}};
     color: {{style.Primary}};
 }
+
+/* Select Style */
+.select2 {
+    font-family: "Poppins", sans-serif!important;
+    color: {{style.Black}}!important;
+    background: {{style.White}}!important;
+    border: 2px solid {{style.Primary}}!important;
+    outline: none!important;
+    word-spacing: 10px!important;
+    letter-spacing: 2px!important;
+    user-select: none;
+    padding: 0px!important;
+    border-radius: 5px!important;
+    transition-duration: 0.2s;
+    width: 250px!important;
+}
+.select2:hover, .select2:active, .select2:focus {
+    border: 2px solid {{style.Secondary}};
+}
+.select2 .select2-selection {
+    background: {{style.White}}!important;
+    border: none!important;
+}
+.select2-dropdown {
+    color: {{style.Black}}!important;
+    background: {{style.White}}!important;
+    border: 2px solid {{style.Primary}}!important;
+    box-shadow: 0px 0px 5px 0px {{style.Black}}!important;
+}
+.select2-search__field {
+    font-family: "Poppins", sans-serif!important;
+    color: {{style.Black}}!important;
+    background: {{style.White}}!important;
+    border: 2px solid {{style.Primary}}!important;
+}
+.select2-results__option {
+    font-family: "Poppins", sans-serif!important;
+    color: {{style.Black}}!important;
+    font-size: 1em!important;
+}
+.select2-results__option--highlighted {
+    color: {{style.White}}!important;
+    background: {{style.Primary}}!important;
+}

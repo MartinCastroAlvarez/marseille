@@ -1,15 +1,33 @@
-<form class="search center row padding-lg" method="GET" action="products.html">
+<br/>
+<br/>
+<br/>
+<form class="search center row padding-sm" method="GET" action="products.html">
     <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2"></div>
     <div class="col-xs-12 col-sm-12 col-md-10 col-lg-8 padding-sm">
         <div id="search-h1"></div>
         <input type="hidden" id="search-title" name="title"/>
-        <input type="hidden" id="search-collection" name="collection"/>
         <input
             class="padding-sm"
             type="text"
             name="search"
             value=""
             placeholder="{{strings.SearchPlaceholder}}"/>
+        <br/>
+        <div class="select-wrapper padding-sm">
+            <select id="search-collection" class="js-example-basic-single" name="collection">
+                {% for id, category in categories.items() %}
+                    <optgroup label="{{strings[id]}}">
+                    {% for id, subcategory in category.Subcategories.items() %}
+                        <optgroup label="{{strings[id]}}">
+                        {% for id, filter in subcategory.Filters.items() %}
+                            <option value="{{filter.Filter}}">{{strings[id]}}</option>
+                        {% endfor %}
+                        </optgroup>
+                    {% endfor %}
+                    </optgroup>
+                {% endfor %}
+            </select>
+        </div>
         <br/>
         <button 
             class="padding-sm"
@@ -21,11 +39,11 @@
     <div class="col-xs-0 col-sm-0 col-md-1 col-lg-2"></div>
 </form>
 <script>
-    document.getElementById("search-collection").value = PARAMS.collection || "";
-    const title = unescape(PARAMS.title || "{{strings.Catalog}}").replace(/\+/g," ")
-    document.getElementById("search-title").value = title
+    document.getElementById("search-collection").val(PARAMS.collection || "")
+    const $searchTitle = unescape(PARAMS.title || "{{strings.Catalog}}").replace(/\+/g," ")
+    document.getElementById("search-title").value = $searchTitle
     document.getElementById("search-h1").innerHTML = `
-        <h1>${title}</h1>
+        <h1>${$searchTitle}</h1>
         <br/>
         <br/>
     `

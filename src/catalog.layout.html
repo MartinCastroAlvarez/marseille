@@ -1,183 +1,30 @@
-<div class="d-flex mt-5 justify-content-between">
-  <div class="row" style="width: 100%">
-    <div class="col-lg-3 col-md-6 col-sm-6">  
-      <div class="productos">
-        <img src="img/glasses.jpg" class="popular-img">
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="productos">
-        <img src="img/watches.jpg" class="popular-img">
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="productos">
-        <img src="img/jackets.jpg" class="popular-img">
-      </div>
-    </div>
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <div class="productos">
-        <img src="img/clothes.jpg" class="popular-img">
-      </div>
-    </div>
-    
-  </div>
-</div>
-<div class="d-flex m-4 pt-5 justify-content-center">
-  <h2 class="new-arrival d-block text-center">NEW <br/>
-    ARRIVAL
-  </h2>
-</div>
-<div class="d-flex container">
-  <div class="row mt-2">    
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-1.jpg" class="popular-img" alt="" >
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+<div class="catalog center row padding-sm">
+    <h3 id="catalog-error">{{strings.CatalogError}}</h3>
+    <h3 id="catalog-loading">{{strings.Loading}}</h3>
+    <div class="row" id="catalog-products"></div>
+    {# 
+    {% for id, collection in collections.items()%}
+        <div
+            {% if loop.index == 1 %}
+                class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-xs"
+            {% else %}
+                class="col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-xs"
+            {% endif %}>
+            <div style="background-image: url(assets/{{collection.Image}})">
+                <div class="overlay padding-lg">
+                    <h2>{{strings[id]}}</h2>
+                    <p>
+                        <form method="GET" action="products.html">
+                            <input type="hidden" name="collection" value="{{collection.Filter}}"/>
+                            <input type="hidden" name="title" value="{{strings[id]}}"/>
+                            <button class="padding-sm" type="submit">
+                                {{strings.ViewMore}}
+                            </button>
+                        </form>
+                    </p>
+                </div>
             </div>
-            <span>$30.00</span>
-          </h3>
         </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-2.jpg" class="popular-img" alt="">
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <span class="card-text">$30.00</span>
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-3.jfif" class="popular-img" alt="">
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <span class="card-text">$30.00</span>
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-4.jfif" class="popular-img" alt="">
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <span class="card-text">$30.00</span>
-          </h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="d-flex container">
-  <div class="row mt-2">
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-5.jpg" class="popular-img" alt="">
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <span>$30.00</span>
-          </h3>
-        </div>
-      </div>
-    </div>
-  
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-6.jpg" class="popular-img" alt="">
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <span class="card-text">$30.00</span>
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-7.jpg" class="popular-img" alt="">
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <span class="card-text">$30.00</span>
-          </h3>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3 col-lg-3 col-md-6 col-sm-6">
-      <div class="productos mb-50 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <img src="img/prod-8.jfif" class="popular-img" alt="">
-        <div class="popular-caption">
-          <h3>
-            <a href="">Knitted Jumper</a>
-            <div>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <span class="card-text">$30.00</span>
-          </h3>
-        </div>
-      </div>
-    </div>
-  </div>
+    {% endfor %}
+    #}
 </div>

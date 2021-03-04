@@ -4,9 +4,9 @@
             {% if loop.index == 1 %}
                 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-xs"
             {% else %}
-                class="col-xs-6 col-sm-6 col-md-6 col-lg-6 padding-xs"
+                class="col-xs-12 col-sm-12 col-md-6 col-lg-6 padding-xs"
             {% endif %}>
-            <div style="background-image: url(assets/{{collection.Image}})">
+            <div class="bg-image" style="background-image: url(assets/{{collection.Image}})">
                 <div class="overlay padding-lg">
                     <h2>{{strings[id]}}</h2>
                     <p>

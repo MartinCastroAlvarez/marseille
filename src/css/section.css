@@ -83,8 +83,7 @@ footer a { color: {{style.White}}; }
     width: 100%;
     margin: 0;
 }
-.collections > div > div {
-    display: block;
+.collections .bg-image {
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -92,7 +91,7 @@ footer a { color: {{style.White}}; }
     display: flex;
     align-items: stretch;
 }
-.collections .overlay {
+.collections .bg-image .overlay {
     background: rgba(255, 255, 255, 0.3);
     width: 100%;
     display: grid;
@@ -109,4 +108,31 @@ footer a { color: {{style.White}}; }
     display: block;
     width: 100%;
     margin: 0;
+}
+
+/* Catalog Style */
+.catalog {
+    z-index: 900;
+    background: {{style.White}};
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+.catalog .catalog-product {
+}
+.catalog .catalog-product .catalog-image {
+    height: 250px;
+    background: {{style.White}};
+    background-position: center;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0px;
+}
+.catalog .catalog-product .catalog-content {
+    display: flex;
+    background: {{style.Silver}};
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
