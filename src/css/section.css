@@ -131,11 +131,6 @@ footer a { color: {{style.White}}; }
 /* Products Style */
 #products-collection {
     height: 50vh;
-    width: 100%;
-    display: block;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 /* Product Style */
