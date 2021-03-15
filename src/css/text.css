@@ -88,8 +88,13 @@ a:link, a:visited, a:active {
 }
 a:hover {
     user-select: text;
-    color: {{style.Tertiary}};
+    color: {{style.Secondary}};
     text-decoration: none;
+}
+
+/* HR */
+hr {
+    border: 1px solid {{style.Black}};
 }
 
 /* Ellipsis Style */

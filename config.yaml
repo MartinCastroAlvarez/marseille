@@ -44,9 +44,8 @@ Style:
   Black: "#282828"
   LightGray: "#F1F2F6"
   DarkGray: "#7f8C8D"
-  Primary: "#33d9b2"
-  Secondary: "#34ace0"
-  Tertiary: "#218c74"
+  Primary: "#F7CFE1"
+  Secondary: "#F5A4CC"
 
 # --------------------------------------------
 # Assets Configuration
@@ -134,6 +133,10 @@ Strings:
     en: "Accessories"
     es: "Accesorios"
     fr: "Accessoires"
+  SeeMore:
+    en: "See more"
+    es: "Ver Más"
+    fr: "Lorem Ipsum"
   All:
     en: "View All"
     es: "Ver Todo"
@@ -435,13 +438,53 @@ Strings:
     es: "Camisas"
     fr: "Lorem Ipsum Dolor Sit Amet..."
   Buy:
-    en: "Buy"
-    es: "Comprar"
+    en: "Buy Now"
+    es: "Comprar Ahora"
+    fr: "Lorem Ipsum"
+  Color:
+    en: "Color"
+    es: "Color"
+    fr: "Lorem"
+  Size:
+    en: "Size"
+    es: "Tamaño"
     fr: "Ipsum"
+  Black:
+    en: "Black"
+    es: "Negro"
+    fr: "Lorem"
   WIP:
     en: "Work In Progress"
     es: "En Construcción"
     fr: "Lorem Ipsum Dolor"
+  FindSize:
+    en: "Find Your Size"
+    es: "Encuentra Tu Talla"
+    fr: "Lorem Ipsum Dolor"
+  SizeGuide:
+    en: "Size Guide"
+    es: "Guía De Talla"
+    fr: "Lorem Ipsum Dolor"
+  AddCart:
+    en: "Add To Cart"
+    es: "Agregar Al Carrito"
+    fr: "Lorem Ipsum Dolor"
+  EmptyCart:
+    en: "Your Cart is Empty!"
+    es: "Tu Carro de Compras está vacío!"
+    fr: "Lorem Ipsum Dolor!"
+  FindProducts:
+    en: "Find Clothes"
+    es: "Buscar Prendas"
+    fr: "Lorem Ipsum Dolor"
+  YourCart:
+    en: "Your Cart"
+    es: "Carro de Compras"
+    fr: "Lorem Ipsum"
+  Remove:
+    en: "Remove"
+    es: "Eliminar"
+    fr: "Lorem Ipsum"
 
 # --------------------------------------------
 # Slider Configuration 
@@ -465,3 +508,5 @@ Link:
   Music: "404.html"
   Food: "404.html"
   Life: "404.html"
+  SizeGuide: "404.html"
+  FindSize: "404.html"

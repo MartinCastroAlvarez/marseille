@@ -62,7 +62,7 @@ const renderCollections = rows => {
                                 type="hidden"
                                 name="collection"
                                 value="${row.id}"/>
-                            <button class="padding-sm" type="submit">
+                            <button class="button-white padding-sm" type="submit">
                                 {{strings.ViewMore}}
                             </button>
                         </form>

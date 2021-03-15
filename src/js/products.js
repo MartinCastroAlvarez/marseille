@@ -5,10 +5,10 @@ let $isProductsLoading = false
 const getProducts = async ($method, $payload) => {
     // Start being busy.
     if ($isProductsLoading) return
-    $('#catalog-loading').show()
+    $('#catalog-loading').removeClass('hidden')
     $isProductsLoading = true
     // Hide errors.
-    $("#catalog-error").hide()
+    $("#catalog-error").addClass('hidden')
     // Send request to the API.
     return $.ajax({
         type: $method,
@@ -25,7 +25,7 @@ const getProducts = async ($method, $payload) => {
         success: (xhr, textStatus) => {
             if (xhr.head.error) {
                 console.error("Error:", xhr, xhr.head)
-                $("#catalog-error").show()
+                $("#catalog-error").removeClass('hidden')
             } else {
                 renderProducts(xhr.body.products.map(x => {
                     let price = ""
@@ -45,11 +45,11 @@ const getProducts = async ($method, $payload) => {
         // Handling a fatal error such as a network problem.
         error: (xhr, textStatus, errorThrown) => {
             console.error("Error:", xhr, textStatus, errorThrown)
-            $("#catalog-error").show()
+            $("#catalog-error").removeClass('hidden')
         },
         // Handling the rend of all requests.
         complete: () => {
-            $("#catalog-loading").hide()
+            $("#catalog-loading").addClass('hidden')
             $isProductsLoading = false
         }
     })
@@ -59,24 +59,22 @@ const getProducts = async ($method, $payload) => {
 const renderProducts = rows => {
     $('#catalog-products').html("")
     if (!rows.length) {
-        $("#catalog-empty").show()
+        $("#catalog-empty").removeClass('hidden')
         return
     }
     rows.forEach(row => {
         $('#catalog-products').append(`
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-4 padding-sm catalog-product">
-                <div class="catalog-image"
+            <div class="col-xs-12 col-sm-6 col-md-3 col-xs-3 padding-sm">
+                <div class="bg-image"
                     style="background-image: url('${row.image}')">
-                </div>
-                <div class="catalog-content padding-sm">
-                    <p class="nowrap">${row.name}</p>
-                    <br/>
-                    <h3>${row.price}</h3>
-                    <br/>
-                    <form action="product.html" target="${row.id}" method="GET">
-                        <input type="hidden" name="product_id" value="${row.id}"/>
-                        <button class="padding-sm">{{strings.View}}</button>
-                    </form>
+                    <div class="overlay padding-sm">
+                        <h5 class="nowrap">${row.name}</h5>
+                        <h2>${row.price}</h2>
+                        <form action="product.html" target="${row.id}" method="GET">
+                            <input type="hidden" name="product_id" value="${row.id}"/>
+                            <button class="button-white padding-sm">{{strings.View}}</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         `)
@@ -86,9 +84,9 @@ const renderProducts = rows => {
 $(document).ready(() => {
 
     // Loading products...
-    $("#catalog-error").hide()
-    $("#catalog-empty").hide()
-    $("#catalog-loading").hide()
+    $("#catalog-error").addClass('hidden')
+    $("#catalog-empty").addClass('hidden')
+    $("#catalog-loading").addClass('hidden')
     $("#catalog-products").html("")
 
     // Sending request to backend.

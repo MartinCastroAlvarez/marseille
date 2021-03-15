@@ -2,6 +2,7 @@
 body {
     width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
     background: {{style.White}};
     font-family: "Poppins", sans-serif;
     display: block;
@@ -13,9 +14,42 @@ ul {
     padding: 0;
 }
 
-/* Style Extensions */
-.center { text-align: center; }
+/* Margin Style */
 .padding-lg { padding: 5em; }
 .padding-md { padding: 2.5em; }
 .padding-sm { padding: 1em; }
 .padding-xs { padding: 0.5em; }
+.padding-no { padding: 0em; }
+
+/* Alignment Style */
+.justify { text-align: justify; }
+.center { text-align: center; }
+.right { text-align: right; }
+.left { text-align: left; }
+
+/* Display Style */
+.hidden { display: none; }
+
+/* Overlay Style */
+.overlay {
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.bg-image {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    padding: 0px;
+    display: flex;
+    align-items: stretch;
+}
+.bg-image h1 { color: {{style.White}}; }
+.bg-image h2 { color: {{style.White}}; }
+.bg-image h3 { color: {{style.White}}; }
+.bg-image h4 { color: {{style.White}}; }
+.bg-image h5 { color: {{style.White}}; }
+.bg-image h6 { color: {{style.White}}; }
+.bg-image p { color: {{style.White}}; }

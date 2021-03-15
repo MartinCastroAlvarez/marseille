@@ -80,11 +80,6 @@ footer a { color: {{style.White}}; }
     display: flex;
     align-items: stretch;
 }
-.categories .overlay {
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    display: block;
-}
 
 /* Collections Style */
 .collections {
@@ -95,24 +90,7 @@ footer a { color: {{style.White}}; }
     width: 100%;
     margin: 0;
 }
-.collections .bg-image {
-    height: 400px;
-    background-position: center;
-    background-size: cover;
-    padding: 0px;
-    display: flex;
-    align-items: stretch;
-}
-.collections .bg-image .overlay {
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    display: grid;
-    align-items: flex-end;
-    justify-content: center;
-}
-.collections .bg-image .overlay h2 {
-    color: {{style.White}};
-}
+.collections .bg-image { height: 400px; }
 
 /* Search Style */
 .search {
@@ -133,23 +111,17 @@ footer a { color: {{style.White}}; }
     width: 100%;
     margin: 0;
 }
-.catalog .catalog-product {
-}
-.catalog .catalog-product .catalog-image {
-    height: 250px;
-    background: {{style.White}};
+.catalog .catalog-image {
+    height: 400px;
+    display: block;
+    width: 100%;
     background-position: center;
-    text-align: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 0px;
-}
-.catalog .catalog-product .catalog-content {
     display: flex;
-    background: {{style.Silver}};
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    align-items: stretch;
 }
 
 /* Slider Style */
@@ -165,22 +137,11 @@ footer a { color: {{style.White}}; }
     background-position: center;
     background-attachment: fixed;
 }
-#products-collection .overlay {
-    background: rgba(255, 255, 255, 0.4);
-    width: 100%;
-    height: inherit;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
 
 /* Product Style */
-#product {
-}
-#product .product-image {
-    height: 450px;
-    display: block;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-}
+#product {}
+#product .bg-image { height: 700px; }
+
+/* Product Style */
+#cart {}
+#cart .bg-image { height: 400px; }

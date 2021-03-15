@@ -48,11 +48,11 @@ const getCollection = async ($method, $id) => {
 const renderCollection = collection => {
     $('#products-collection').css("background-image", `url("${collection.image.src}")`)
     $('#products-collection h1').html(collection.title)
-    $('#products-collection').show()
+    $('#products-collection').removeClass('hidden')
 }
 
 $(document).ready(() => {
-    $('#products-collection').hide()
+    $('#products-collection').removeClass('hidden')
     if ($collection) {
         // Loading from backend.
         getCollection("get", $collection)

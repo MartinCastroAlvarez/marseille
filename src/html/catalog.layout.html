@@ -1,7 +1,11 @@
-<div class="catalog center row padding-lg">
-    <h3 id="catalog-error">{{strings.CatalogError}}</h3>
-    <h6 id="catalog-empty">{{strings.EmptyList}}</h6>
-    <h3 id="catalog-loading">{{strings.Loading}}</h3>
+<div class="catalog center row padding-sm">
+    <h3 id="catalog-error" class="hidden center padding-lg">{{strings.CatalogError}}</h3>
+    <h6 id="catalog-empty" class="hidden center padding-lg">{{strings.EmptyList}}</h6>
+    <h3 id="catalog-loading" class="center padding-md">
+        {% include 'html/loading.layout.html' %}
+        <br/>
+        {{strings.Loading}}
+    </h3>
     <div class="row" id="catalog-products"></div>
     <br/>
 </div>

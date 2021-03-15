@@ -12,7 +12,7 @@ input {
     letter-spacing: 2px;
     user-select: none;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 1px;
     transition-duration: 0.2s;
 }
 input:hover, input:active, input:focus {
@@ -20,22 +20,40 @@ input:hover, input:active, input:focus {
 }
 
 /* Button Style */
-button {
+button.button-white {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    background: {{style.Primary}};
-    border: 2px solid {{style.Primary}};
-    color: {{style.White}};
+    background: none;
     font-size: 1em;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 1px;
+    transition-duration: 0.2s;
+    outline: none;
+    opacity: 0.8;
+    border: 2px solid {{style.White}};
+    color: {{style.White}};
+}
+button.button-white:hover {
+    opacity: 1;
+    border: 2px solid {{style.Primary}};
+    color: {{style.Primary}};
+}
+button.button-black {
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid {{style.Black}};
+    color: {{style.White}};
+    background: {{style.Black}};
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 1px;
     transition-duration: 0.2s;
     outline: none;
 }
-button:hover {
+button.button-black:hover {
     border: 2px solid {{style.Primary}};
-    background: {{style.White}};
-    color: {{style.Primary}};
+    color: {{style.Black}};
+    background: {{style.Secondary}};
 }
 
 /* Select Style */
@@ -49,7 +67,7 @@ button:hover {
     letter-spacing: 2px!important;
     user-select: none;
     padding: 0px!important;
-    border-radius: 5px!important;
+    border-radius: 1px!important;
     transition-duration: 0.2s;
     width: 70% !important;
 }
@@ -58,7 +76,7 @@ button:hover {
     border: none;
 }
 .select2:hover, .select2:active, .select2:focus {
-    border: 2px solid {{style.Secondary}};
+    border: 2px solid {{style.Secondary}}!important;
 }
 .select2 .select2-selection {
     background: {{style.White}}!important;
@@ -68,7 +86,6 @@ button:hover {
     color: {{style.Black}}!important;
     background: {{style.White}}!important;
     border: 2px solid {{style.Primary}}!important;
-    box-shadow: 0px 0px 5px 0px {{style.Black}}!important;
 }
 .select2-search__field {
     font-family: "Poppins", sans-serif!important;
