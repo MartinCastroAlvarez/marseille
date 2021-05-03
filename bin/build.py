@@ -111,6 +111,10 @@ for language in languages:
         "API_URL": secrets['url'],
         "application": config["Application"],
         "url": secrets["url"],
+        "shop": {
+            "id": secrets["shop"],
+            "token": secrets["token"],
+        },
         "style": config["Style"],
         "assets": config["Assets"],
         "link": config["Link"],

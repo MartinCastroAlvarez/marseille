@@ -465,9 +465,17 @@ Strings:
     en: "Size Guide"
     es: "Guía De Talla"
     fr: "Lorem Ipsum Dolor"
-  AddCart:
+  AddToCart:
     en: "Add To Cart"
     es: "Agregar Al Carrito"
+    fr: "Lorem Ipsum Dolor"
+  Checkout:
+    en: "Checkout"
+    es: "Finalizar Compra"
+    fr: "Lorem Ipsum Dolor"
+  Subtotal:
+    en: "Subtotal"
+    es: "Subtotal"
     fr: "Lorem Ipsum Dolor"
   EmptyCart:
     en: "Your Cart is Empty!"

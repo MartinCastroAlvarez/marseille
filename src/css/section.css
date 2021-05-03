@@ -124,10 +124,6 @@ footer a { color: {{style.White}}; }
     align-items: stretch;
 }
 
-/* Slider Style */
-.slider {
-}
-
 /* Products Style */
 #products-collection {
     height: 50vh;
@@ -136,7 +132,10 @@ footer a { color: {{style.White}}; }
 /* Product Style */
 #product {}
 #product .bg-image { height: 700px; }
-
-/* Product Style */
-#cart {}
-#cart .bg-image { height: 400px; }
+#product #kproduct {
+    display: block;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    max-width: 100%!important;
+}

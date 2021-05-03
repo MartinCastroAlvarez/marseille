@@ -26,6 +26,7 @@ const getProduct = async ($method, $id) => {
                 console.error("Error:", xhr, xhr.head)
             } else {
                 renderProduct(xhr.body.product)
+                renderCart($id)
             }
         },
         // Handling a fatal error such as a network problem.
@@ -77,32 +78,12 @@ const renderProduct = product => {
             </div>
         `
     })
-    const variants = product.variants.map(x => {
-        return `
-            <option value="${x.id}-${x.price}">
-                ${getString(x.title)}
-                -
-                {{CURRENCY}} ${x.price}
-            </option>
-        `
-    })
-    const options = product.options.map(x => {
-        const values = x.values.map(y => {
-            return `
-                <p>
-                    <b>${getString(y)}<b>
-                </p>
-            `
-        })
-        return `
-            <div>
-                <h6>${getString(x.name)}</h6>
-                <br/>
-                ${values.join('')}
-            </div>
-            <hr/>
-        `
-    })
+    const type = product.product_type ? `<p>
+        <i class="fa fa-plus-circle"></i>
+        <a href="products.html?type=${product.product_type}">
+            {{strings.SeeMore}}
+        </a>
+    </p>` : ''
     $('#product').html(`
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -122,14 +103,10 @@ const renderProduct = product => {
                 </h5>
                 <br/>
                 <p class="justify">${description.filter(x => x).join('<br/>')}</p>
-                <p>
-                    <i class="fa fa-plus-circle"></i>
-                    <a href="products.html?type=${product.product_type}">
-                        {{strings.SeeMore}}
-                    </a>
-                </p>
+                ${type}
                 <hr/>
-                ${options.join('')}
+                <div id='kproduct'></div>
+                <hr/>
                 <div class="row">
                     <div class="col-xs-6">
                         <p>
@@ -148,20 +125,6 @@ const renderProduct = product => {
                         </p>
                     </div>
                 </div>
-                <form action="cart.html" method="GET" class="padding-sm">
-                    <input type="hidden" name="action" value="add"/>
-                    <input type="hidden" name="title" value="${getString(product.title)}"/>
-                    <input type="hidden" name="product_id" value="${product.id}"/>
-                    <input type="hidden" name="product_image" value="${product.image.src}"/>
-                    <select id="variant-select" class="variant-select" name="variant_id">
-                        ${variants.join('')}
-                    </select>
-                    <br/>
-                    <br/>
-                    <button class="button-black padding-sm">
-                        {{strings.AddCart}}
-                    </button>
-                </form>
             </div>
         </div>
         <div class="row">
@@ -170,7 +133,6 @@ const renderProduct = product => {
             </div>
         </div>
     `)
-    $('#variant-select').select2()
 }
 
 $(document).ready(() => {
